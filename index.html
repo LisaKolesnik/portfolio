@@ -16,10 +16,23 @@
       <header>
         <p class="logo">MZ</p>
         <nav class="topnav">
-          <a class="nav-a" href="#About">About</a>
-          <a class="nav-a" href="#Skills">Skills</a>
-          <a class="nav-a" href="#Portfolio">Portfolio</a>
-          <a class="nav-a" href="#Contacts">Contacts</a>
+          <button class="nav"><a class="nav-a" href="#About">About</a></button>
+          <button class="nav"><a class="nav-a" href="#Skills">Skills</a></button>
+          <button class="nav"><a class="nav-a" href="#Portfolio">Portfolio</a></button>
+          <button class="nav"><a class="nav-a" href="#Contacts">Contacts</a></button>
+        </nav>
+        <div class="dropdown-btn" onclick="openClose(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+        <nav class="dropdown">
+          <div id="myDropdown" class="dropdown-content">
+            <a class="nav-a dropdown-nav" href="#About">About</a>
+            <a class="nav-a dropdown-nav" href="#Skills">Skills</a>
+            <a class="nav-a dropdown-nav" href="#Portfolio">Portfolio</a>
+            <a class="nav-a dropdown-nav" href="#Contacts">Contacts</a>
+          </div>
         </nav>
       </header>
       <div class="cont">
@@ -44,17 +57,56 @@
       <div class="skills-info">
         <div class="skills-left">
           <div class="skills-tab">          
-            <button class="skill" onclick="openSkill(event, 'HTML-CSS')">HTML, CSS</button>
-            <button class="skill" onclick="openSkill(event, 'JS')">JS</button>
-            <button class="skill" onclick="openSkill(event, 'Web-Design')">Web Design</button>
+            <button class="skill" onclick="openSkill(event, 'HTML-CSS', 'StHC')">HTML, CSS</button>
+            <button class="skill" onclick="openSkill(event, 'JS', 'StJS')">JS</button>
+            <button class="skill" onclick="openSkill(event, 'Web-Design', 'StWD')">Web Design</button>
             <br>
-            <button class="skill" onclick="openSkill(event, 'Other')">Other</button>
+            <button class="skill" onclick="openSkill(event, 'Other', 'StO')">Other</button>
           </div>
-          <div class="statistic">
+          <div id="StHC" class="statistic">
             <div class="statistic-left">
               <p class="statistic-text">Less</p>
               <p class="statistic-text">Sass</p>
               <p class="statistic-text">Bootstrap 3, 4, 5</p>
+            </div>
+            <div class="statistic-right">
+              <div class="percent"></div>
+              <div class="percent"></div>
+              <div class="percent"></div>
+              <div class="percent"></div>
+            </div>
+          </div>
+          <div id="StJS" class="statistic">
+            <div class="statistic-left">
+              <p class="statistic-text"></p>
+              <p class="statistic-text"></p>
+              <p class="statistic-text"></p>
+            </div>
+            <div class="statistic-right">
+              <div class="percent"></div>
+              <div class="percent"></div>
+              <div class="percent"></div>
+              <div class="percent"></div>
+            </div>
+          </div>
+          <div id="StWD" class="statistic">
+            <div class="statistic-left">
+              <p class="statistic-text"></p>
+              <p class="statistic-text"></p>
+              <p class="statistic-text"></p>
+            </div>
+            <div class="statistic-right">
+              <div class="percent"></div>
+              <div class="percent"></div>
+              <div class="percent"></div>
+              <div class="percent"></div>
+            </div>
+          </div>
+          <div id="StO" class="statistic">
+            <div class="statistic-left">
+              <p class="statistic-text"></p>
+              <p class="statistic-text"></p>
+              <p class="statistic-text"></p>
             </div>
             <div class="statistic-right">
               <div class="percent"></div>
@@ -158,22 +210,22 @@
 
       <div id="Web-disign" class="portfolio-content">
         <div class="design-img">
-          <img src="./img/p7.png" alt="">
-          <img src="./img/p4.png" alt="">
-          <img src="./img/p5.png" alt="">
-          <img src="./img/p6.png" alt="">
+          <img class="portfolio-img" src="./img/p7.png" alt="">
+          <img class="portfolio-img" src="./img/p4.png" alt="">
+          <img class="portfolio-img" src="./img/p5.png" alt="">
+          <img class="portfolio-img" src="./img/p6.png" alt="">
         </div>
         <div class="design-img">
-          <img src="./img/p10.png" alt="">
-          <img src="./img/p3.png" alt="">
+          <img class="portfolio-img" src="./img/p10.png" alt="">
+          <img class="portfolio-img" src="./img/p3.png" alt="">
         </div>
         <div class="design-img">
-          <img src="./img/p2.png" alt="">
-          <img src="./img/p8.png" alt="">
+          <img class="portfolio-img" src="./img/p2.png" alt="">
+          <img class="portfolio-img" src="./img/p8.png" alt="">
         </div>
         <div class="design-img">
-          <img src="./img/p9.png" alt="">
-          <img src="./img/p1.png" alt="">
+          <img class="portfolio-img" src="./img/p9.png" alt="">
+          <img class="portfolio-img" src="./img/p1.png" alt="">
         </div>
       </div>
       <div id="Html-css" class="portfolio-content"></div>

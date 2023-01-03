@@ -1,7 +1,31 @@
-function openSkill(event, skillName) {
+
+function openClose(x) {
+  document.getElementById("myDropdown").classList.toggle("show");
+  x.classList.toggle("change");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropdown-btn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+function openSkill(event, skillName, stat) {
   var i, tabcontent, tablinks;
 
   tabcontent = document.getElementsByClassName("skills-right");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tabcontent = document.getElementsByClassName("statistic");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
@@ -13,6 +37,8 @@ function openSkill(event, skillName) {
 
   document.getElementById(skillName).style.display = "block";
   event.currentTarget.className += " active";
+
+  document.getElementById(stat).style.display = "flex";
 }
 
 function openTab(evt, tabName) {

@@ -20,13 +20,13 @@ body {
 
 main{
   background: linear-gradient(to right, #C8CBD4 10% 30%, #1F1F1F 30% 70% );
-  padding-bottom: 166px;
+  padding-bottom: 9%;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  padding: 73px 79px;
+  padding: 4%;
 }
 
 p {
@@ -41,7 +41,15 @@ p {
 }
 
 .topnav {
-  padding-top: 12px;
+  padding-top: 1%;
+}
+
+.nav {
+  font-family: inherit;
+  background: transparent;
+  border: none;
+  width: 240px;
+  font-weight: 300;
 }
 
 .nav-a {
@@ -49,7 +57,6 @@ p {
   line-height: 40px;
   text-decoration: none;
   color: #C8CBD4;
-  padding-left: 136px;
 }
 
 .nav-a:hover {
@@ -59,10 +66,59 @@ p {
   cursor: pointer;
 }
 
+.dropdown-btn {
+  display: none;
+  position: absolute;
+  right: 4%;
+  z-index: 2;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 2px;
+  background-color: #C8CBD4;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 8px) rotate(-45deg);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -8px) rotate(45deg);
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  padding-top: 60px;
+  width: 70%;
+  height: 350px;
+  right: 0;
+  position: absolute;
+  background-color: #1F1F1F;
+  min-width: 160px;
+  box-shadow: 0px 7px 18px rgba(16, 16, 16, 0.7);
+  z-index: 1;
+}
+
+.show {display:grid;}
+
+.dropdown-nav {
+  text-align: left;
+  padding-left: 15%;
+}
+
 .cont {
   position: relative;
-  margin: 0 0 0 270px;
-  padding-bottom: 380px;
+  margin: 0 0 0 13%;
+  padding-bottom: 20%;
 }
 
 .cont:after {
@@ -75,25 +131,27 @@ p {
 	background: transparent;
 	background-image: linear-gradient(#1F1F1F, transparent, #1F1F1F);
 	opacity: 0.8;
-  height: 1070px;
+  height: 100%;
 }
 
 .bg {
   position: absolute;
   opacity: 0.05;
+  width: 100%;
+  height: 100%;
 }
 
 h1 {
   font-weight: 200;
   font-size: 243px;
-  line-height: 296px;
+  line-height: 120%;
   margin: 0;
 }
 
 .title {
   color: #C8CBD4;
-  margin-left: -48px;
-  padding-top: 125px;
+  margin-left: -3%;
+  padding-top: 8%;
 }
 
 .mz {
@@ -101,11 +159,11 @@ h1 {
   line-height: 55px;
   text-align: right;
   color: #C8CBD4;
-  padding: 109px 143px;
+  padding: 7% 8%;
 }
 
 .cont_about {
-  padding-bottom: 180px;
+  padding-bottom: 9%;
   position: relative;
 }
 
@@ -127,37 +185,37 @@ h1 {
   height: 984px;
   background-size: contain;
   font-size: 45px;
-  line-height: 55px;
+  line-height: 123%;
   display: flex;
   justify-content: space-between;
+  box-shadow: 0px 7px 18px rgba(16, 16, 16, 0.7);
 }
 
 .text-about {
   color: #C8CBD4;
   position: absolute;
-  padding: 350px 0 0 513px;
+  padding: 17% 0 0 25%;
   text-align: right;
   mix-blend-mode: difference;
 }
 
 .about-title {
-  padding: 541px 0 166px 0;
-  padding-left: 174px;
+  padding: 27% 0 8% 9%;
 }
 
 .photo {
-  height: 1168px;
+  height: 120%;
   margin-top: -90px;
-  padding-right: 90px;
+  padding-right: 4.5%;
 }
 
 .design {
   font-weight: 700;
   font-size: 97px;
-  line-height: 118px;
+  line-height: 120%;
   color: #AB0505;
-  bottom: 130px;
-  right: 86px;
+  bottom: 11%;
+  right: 4%;
   position: absolute;
 }
 
@@ -167,7 +225,7 @@ h1 {
 
 .bg-about {
   font-size: 764px;
-  line-height: 850px;
+  line-height: 111%;
   color: rgba(200, 203, 212, 0.07);
   position: absolute;
   right: 0;
@@ -182,14 +240,13 @@ h1 {
 h2 {
   font-weight: 700;
   font-size: 260px;
-  line-height: 317px;
+  line-height: 122%;
   color: #C8CBD4;
   margin: 0;
 }
 
 .skills-title {
-  padding-top: 300px;
-  padding-left: 70px;
+  padding: 15% 0 0 3%;
 }
 
 .skills-info {
@@ -198,7 +255,7 @@ h2 {
 
 .skills-left {
   background-image: linear-gradient(#1F1F1F 65%, #AB0505 65% 65.3%, #1F1F1F 65.3% 100%);
-  width: 1378px;
+  width: 67%;
   height: 1721px;
   z-index: 1;
   margin-top: -85px;
@@ -208,12 +265,11 @@ h2 {
 .skill {
   font-weight: 700;
   font-size: 100px;
-  line-height: 122px;
+  line-height: 122%;
   color: #C8CBD4;
   background: transparent;
   border: none;
-  padding: 125px 90px 0 0;
-  padding-left: 70px;
+  padding: 9% 6% 0 5%;
   font-family: inherit;
 }
 
@@ -228,29 +284,29 @@ h2 {
   color: #AB0505;
   font-weight: 700;
   font-size: 100px;
-  line-height: 122px;
+  line-height: 122%;
   background: transparent;
   border: none;
   font-family: inherit;
 }
 
 .statistic {
-  padding-top: 465px;
-  display: flex;
+  padding-top: 34%;
+  z-index: 2;
+  display: none;
 }
 
 .statistic-text {
-  padding-bottom: 43px;
+  width: 125%;
+  padding: 0px 0 10% 23%;
   font-weight: 300;
   font-size: 40px;
-  line-height: 49px;
+  line-height: 142%;
   color: #C8CBD4;
-  padding-left: 70px;
 }
 
 .statistic-right {
-  padding-left: 85px;
-  padding-top: 16px;
+  padding: 1% 0 0 11%;
 }
 
 .percent {
@@ -265,11 +321,11 @@ h2 {
   background-image: linear-gradient(#C8CBD4 69%, #AB0505 69% 69.4%, #C8CBD4 69.4% 100%);
   font-weight: 300;
   font-size: 40px;
-  line-height: 90px;
+  line-height: 225%;
   color: #1F1F1F;
   width: 674px;
   height: 1498px;
-  padding: 81px 68px;
+  padding: 4% 3%;
   display: none;
 }
 
@@ -282,20 +338,19 @@ h2 {
   width: 674px;
   top: 1649px;
   position: absolute;
-  padding-top: 87px;
+  padding-top: 4.5%;
 }
 
 .skill-statistic-text {
-  padding-left: 68px;
-  line-height: 49px;
-  padding-bottom: 43px;
+  padding: 0 0 6% 10%;
+  line-height: 121%;
 }
 
 .info {
   display: flex;
   color: #DADEE9;
-  padding: 0 84px;
-  gap: 440px;
+  padding: 0 4%;
+  gap: 23%;
 }
 
 .info-title {
@@ -307,7 +362,7 @@ h2 {
 .courses-text {
   font-weight: 200;
   font-size: 40px;
-  line-height: 70px;
+  line-height: 175%;
 }
 
 .hobbys {
@@ -315,17 +370,17 @@ h2 {
 }
 
 .hobby-svg {
-  padding-right: 40px;
+  padding-right: 11%;
 }
 
 .cont-portfolio {
-  padding: 220px 60px;
+  padding: 11% 3%;
 }
 
 .tab {
   justify-content: space-between;
   display: flex;
-  padding-top: 85px;
+  padding-top: 4.5%;
 }
 
 .portfolio-tab {
@@ -356,9 +411,10 @@ h2 {
 }
 
 .portfolio-content {
-  padding: 89px 0 164px;
+  padding: 5% 0 8%;
   justify-content: space-between;
   display: none;
+  box-shadow: 0px 7px 18px rgba(16, 16, 16, 0.7);
 }
 
 .design-img  {
@@ -368,26 +424,38 @@ h2 {
   align-content: center;
 }
 
+.portfolio-img {
+  padding-bottom: 8%;
+  width: 100%;
+  height: 100%;
+}
+
 .cont-contacts {
-  padding: 500px 85px 0;
+  padding: 25% 4% 0;
   display: grid;
 }
 
 .contacts-title {
-  padding-bottom: 74px;
+  padding-bottom: 4%;
 }
 
 .contacts-links {
-  width: 100%;
+  width: 730px;
   font-size: 50px;
-  line-height: 61px;
+  line-height: 120%;
   color: #C8CBD4;
   text-decoration: none;
-  padding-bottom: 74px;
+  padding-bottom: 4%;
+}
+
+.contacts-links:hover {
+  cursor: pointer;
+  color: #AB0505;
+  transition: 0.5s;
 }
 
 .copyright {
-  padding: 131px 91px 88px;
+  padding: 7% 4% 4%;
   font-weight: 400;
   font-size: 30px;
   line-height: 37px;
@@ -404,27 +472,28 @@ h2 {
   }
 
   .logo {
-    font-size: calc(33px + (16 + 16 * 0.7) * ((100vw - 320px) / 2050));
+    font-size: calc(24px + (18 + 18 * 0.7) * ((100vw - 320px) / 2050));
   }
 
   .nav-a {
-    font-size: calc(20px + (10 + 10 * 0.7) * ((100vw - 320px) / 2050));
+    font-size: calc(16px + (12 + 12 * 0.7) * ((100vw - 320px) / 2050));
   }
 
   h1 {
-    font-size: calc(70px + (120 + 120 * 0.7) * ((100vw - 320px) / 2050));
+    font-size: calc(37px + (143 + 143 * 0.7) * ((100vw - 320px) / 2050));
   }
 
   .mz {
-    font-size: calc(24px + (15 + 15 * 0.7) * ((100vw - 320px) / 2050));
+    font-size: calc(18px + (17 + 17 * 0.7) * ((100vw - 320px) / 2050));
   }
 
   .about {
-    font-size: calc(24px + (14 + 14 * 0.7) * ((100vw - 320px) / 2050));
+    font-size: calc(8px + (25 + 25 * 0.7) * ((100vw - 320px) / 2050));
+    height: calc(170px + (540 + 540 * 0.7) * ((100vw - 320px) / 2050));
   }
 
   .design {
-    font-size: calc(40px + (42 + 42 * 0.7) * ((100vw - 320px) / 2050));
+    font-size: calc(20px + (52 + 52 * 0.7) * ((100vw - 320px) / 2050));
   }
   
   .bg-about {
@@ -432,46 +501,124 @@ h2 {
   }
 
   h2 {
-    font-size: calc(75px + (130 + 130 * 0.7) * ((100vw - 320px) / 2050));
+    font-size: calc(35px + (150 + 150 * 0.7) * ((100vw - 320px) / 2050));
+  }
+
+  .skills-left {
+    height: calc(274px + (970 + 970 * 0.7) * ((100vw - 320px) / 2050));
   }
 
   .skill {
-    font-size: calc(35px + (45 + 45 * 0.7) * ((100vw - 320px) / 2050));
+    font-size: calc(14px + (55 + 55 * 0.7) * ((100vw - 320px) / 2050));
   }
 
   .skill.active {
-    font-size: calc(35px + (45 + 45 * 0.7) * ((100vw - 320px) / 2050));
+    font-size: calc(14px + (55 + 55 * 0.7) * ((100vw - 320px) / 2050));
   }
 
   .statistic-text {
-    font-size: calc(20px + (13 + 13 * 0.7) * ((100vw - 320px) / 2050));
+    font-size: calc(10px + (18 + 18 * 0.7) * ((100vw - 320px) / 2050));
   }
   
   .skills-right {
-    font-size: calc(20px + (13 + 13 * 0.7) * ((100vw - 320px) / 2050));
+    font-size: calc(7px + (24 + 24 * 0.7) * ((100vw - 320px) / 2050));
+    height: calc(230px + (845 + 845 * 0.7) * ((100vw - 320px) / 2050));
   }
 
   .info-title {
-    font-size: calc(35px + (45 + 45 * 0.7) * ((100vw - 320px) / 2050));
+    font-size: calc(28px + (50 + 50 * 0.7) * ((100vw - 320px) / 2050));
   }
 
   .courses-text {
-    font-size: calc(20px + (13 + 13 * 0.7) * ((100vw - 320px) / 2050));
+    font-size: calc(14px + (16 + 16 * 0.7) * ((100vw - 320px) / 2050));
   }
 
   .portfolio-tab {
-    font-size: calc(24px + (18 + 18 * 0.7) * ((100vw - 320px) / 2050));
+    font-size: calc(9px + (24 + 24 * 0.7) * ((100vw - 320px) / 2050));
   }
   
   .portfolio-tab.active {
-    font-size: calc(24px + (18 + 18 * 0.7) * ((100vw - 320px) / 2050));
+    font-size: calc(9px + (24 + 24 * 0.7) * ((100vw - 320px) / 2050));
+  }
+
+  .design-img {
+    height: auto;
   }
 
   .contacts-links {
-    font-size: calc(24px + (18 + 18 * 0.7) * ((100vw - 320px) / 2050));
+    font-size: calc(16px + (22 + 22 * 0.7) * ((100vw - 320px) / 2050));
   }
   
   .copyright {
-    font-size: calc(15px + (10 + 10 * 0.7) * ((100vw - 320px) / 2050));
+    font-size: calc(10px + (14 + 14 * 0.7) * ((100vw - 320px) / 2050));
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .nav {
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .photo {
+    margin-top: -45px;
+  }
+
+  .skills-left {
+    margin-top: -45px;
+  }
+
+  .skill-text {
+    word-spacing: 50px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .nav {
+    display: none;
+  }
+
+  .dropdown-btn {
+    display: inline-block;
+    cursor: pointer;
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  .text-about {
+    padding: 17% 0 0 20%;
+  }
+
+  .hobbys {
+    display: block;
+  }
+
+  svg {
+    width: 50px;
+    height: 57px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  
+  .skills-left {
+    margin-top: -20px;
+  }
+
+  .skill-text {
+    word-spacing: 25px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .photo {
+    margin-top: -20px;
+  }
+
+  .about-title {
+    padding: 32% 0 8% 6%;
   }
 }
