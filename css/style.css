@@ -92,7 +92,7 @@ p {
 }
 
 .dropdown {
-  display: inline-block;
+  display: none;
 }
 
 .dropdown-content {
@@ -583,6 +583,10 @@ h2 {
     display: inline-block;
     cursor: pointer;
     align-self: center;
+  }
+
+  .dropdown {
+    display: inline-block;
   }
 }
 

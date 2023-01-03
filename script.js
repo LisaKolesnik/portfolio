@@ -1,7 +1,7 @@
 
 function openClose(x) {
-  document.getElementById("myDropdown").classList.toggle("show");
   x.classList.toggle("change");
+  document.getElementById("myDropdown").classList.toggle("show");
 }
 
 window.onclick = function(event) {
