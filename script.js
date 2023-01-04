@@ -1,21 +1,21 @@
 
 function openClose(x) {
   x.classList.toggle("change");
-  document.getElementById("myDropdown").classList.toggle("show");
+  document.getElementById("dropdown").classList.toggle("show");
 }
 
-window.onclick = function(event) {
-  if (!event.target.matches('.dropdown-btn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
+// window.onclick = function(event) {
+//   if (!event.target.matches('.dropdown-btn')) {
+//     var dropdowns = document.getElementsByClassName("dropdown-content");
+//     var i;
+//     for (i = 0; i < dropdowns.length; i++) {
+//       var openDropdown = dropdowns[i];
+//       if (openDropdown.classList.contains('show')) {
+//         openDropdown.classList.remove('show');
+//       }
+//     }
+//   }
+// }
 
 function openSkill(event, skillName, stat) {
   var i, tabcontent, tablinks;
