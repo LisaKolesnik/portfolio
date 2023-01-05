@@ -254,7 +254,7 @@ h2 {
 }
 
 .skills-left {
-  background-image: linear-gradient(#1F1F1F 65%, #AB0505 65% 65.3%, #1F1F1F 65.3% 100%);
+  background-image: linear-gradient(#1F1F1F 66%, #AB0505 66% 66.2%, #1F1F1F 66.2% 100%);
   width: 67%;
   height: 1721px;
   z-index: 1;
@@ -292,7 +292,6 @@ h2 {
 
 .statistic {
   padding-top: 34%;
-  z-index: 2;
   display: none;
 }
 
@@ -334,15 +333,16 @@ h2 {
 }
 
 .skills-right {
-  background-image: linear-gradient(#C8CBD4 69%, #AB0505 69% 69.4%, #C8CBD4 69.4% 100%);
+  background-image: linear-gradient(transparent 4%, #C8CBD4 4% 66%, #AB0505 66% 66.2%, #C8CBD4 66.2% 93%, transparent 93% 100%);
   font-weight: 300;
   font-size: 40px;
   line-height: 225%;
   color: #1F1F1F;
   width: 33%;
-  height: 1498px;
-  padding: 4% 3%;
+  padding: 7% 3%;
   display: none;
+  height: 1721px;
+  margin-top: -85px;
 }
 
 .skill-text {
@@ -350,8 +350,7 @@ h2 {
 }
 
 .skill-statistic {
-  width: 674px;
-  padding-top: 73%;
+  padding-top: 79%;
 }
 
 .skill-statistic-text {
@@ -492,7 +491,7 @@ h2 {
   }
 
   .nav-a {
-    font-size: calc(14px + (13 + 13 * 0.7) * ((100vw - 800px) / 2050));
+    font-size: calc(14px + (17 + 17 * 0.7) * ((100vw - 800px) / 2050));
   }
 
   h1 {
@@ -521,7 +520,7 @@ h2 {
   }
 
   .skills-left {
-    height: calc(274px + (970 + 970 * 0.7) * ((100vw - 320px) / 2050));
+    height: calc(274px + (980 + 980 * 0.7) * ((100vw - 320px) / 2050));
   }
 
   .skill {
@@ -533,17 +532,21 @@ h2 {
   }
 
   .statistic-text {
-    font-size: calc(7px + (19 + 19 * 0.7) * ((100vw - 320px) / 2050));
+    font-size: calc(7px + (23 + 23 * 0.7) * ((100vw - 320px) / 2050));
   }
 
   .percent {
-    width: calc(125px + (400 + 400 * 0.7) * ((100vw - 320px) / 2050));
-    height: calc(4px + (5 + 5 * 0.7) * ((100vw - 320px) / 2050));
+    width: calc(115px + (475 + 475 * 0.7) * ((100vw - 320px) / 2050));
+    height: calc(4px + (7 + 7 * 0.7) * ((100vw - 320px) / 2050));
   }
   
   .skills-right {
-    font-size: calc(7px + (24 + 24 * 0.7) * ((100vw - 320px) / 2050));
-    height: calc(230px + (845 + 845 * 0.7) * ((100vw - 320px) / 2050));
+    font-size: calc(7px + (23 + 23 * 0.7) * ((100vw - 320px) / 2050));
+    height: calc(274px + (980 + 980 * 0.7) * ((100vw - 320px) / 2050));
+  }
+
+  .skill-statistic {
+    padding-top: 73%;
   }
 
   .info-title {
@@ -592,7 +595,8 @@ h2 {
     margin-top: -45px;
   }
 
-  .skills-left {
+  .skills-left,
+  .skills-right {
     margin-top: -45px;
   }
 
@@ -605,15 +609,15 @@ h2 {
   .nav {
     width: 130px;
   } 
+
+  .skill-statistic {
+    padding-top: 70%;
+  }
 }
 
 @media screen and (max-width: 1110px) {
   .text-about {
     padding: 17% 0 0 20%;
-  }
-
-  .hobbys {
-    display: block;
   }
 
   svg {
@@ -626,7 +630,8 @@ h2 {
 
 @media screen and (max-width: 800px) {
   
-  .skills-left {
+  .skills-left,
+  .skills-right {
     margin-top: -20px;
   }
 
@@ -651,6 +656,10 @@ h2 {
   .dropdown-nav {
     font-size: 16px;
   }
+
+  .hobbys {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -660,5 +669,23 @@ h2 {
 
   .about-title {
     padding: 32% 0 8% 6%;
+  }
+
+  .statistic {
+    padding-top: 36.5%;
+  }
+
+  .percent {
+    border: 0.5px solid #C8CBD4;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .statistic {
+    padding-top: 38.5%;
+  }
+
+  .text-about {
+    padding: 17% 0 0 14%;
   }
 }
