@@ -663,6 +663,14 @@ h2 {
 }
 
 @media screen and (max-width: 550px) {
+  .dropdown-content {
+    height: 255px;
+  }
+  
+  .dropdown-nav {
+    font-size: 14px;
+  }
+  
   .photo {
     margin-top: -20px;
   }
@@ -687,5 +695,10 @@ h2 {
 
   .text-about {
     padding: 17% 0 0 14%;
+  }
+
+  svg {
+    width: 35px;
+    height: 42px;
   }
 }
