@@ -62,13 +62,16 @@ var modal = document.getElementById("mod");
 
 var img = document.getElementById("img");
 var modalImg = document.getElementById("image");
-img.onclick = function(){
+img.onclick = function() {
   modal.style.display = "block";
   modalImg.src = this.src;
-}
+};
 
 var span = document.getElementsByClassName("close")[0];
 
 span.onclick = function() {
   modal.style.display = "none";
-}
+};
+
+
+
