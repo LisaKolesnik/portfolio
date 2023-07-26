@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Horohorina</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+</head>
+<body>
+<nav id="nav">
+    <div class="max-width">
+        <div class="logo"><span>$</span> Horohorina</div>
+        <div class="menu-cont">
+            <div id="menu" class="menu">
+                <div><a href="#nav">О нас</a></div>
+                <div><a href="#price">Цены</a></div>
+                <div><a href="#footer">Контакты</a></div>
+            </div>
+            <div class="container1" href="javascript:void(0);" onclick="myFunction2(this), myFunction()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<div class="cont">
+    <div class="flex-cont">
+        <div class="box">
+            <div class="z-index-3">
+                <h1>Скупка</h1>
+                <p>Ломбард Horohorina занимается оценкой и скупкой ювелирных украшений, драгоценных камней, предметов
+                    антиквариата, бронзы, икон, а также брендовых вещей и техники apple. Мы гарантируем объективную
+                    оценку ваших изделий совершенно бесплатно.</p>
+
+                <a class="btn" href="#footer">Оценить</a>
+
+            </div>
+            <div class="box-2">
+                <img class="ring" alt=" " src="img/ring.png">
+                <img class="hand" alt=" " src="img/hand.png">
+            </div>
+        </div>
+    </div>
+    <div class="auto"></div>
+    <div class="container">
+        <div class="padding">
+            <h2 id="price">Оценить онлайн</h2>
+            <p>Процедура оценки:</p>
+            <p>С помощью онлайн калькулятора вы можете сами рассчитать приблизительную стоимость ваших
+                изделий.</p>
+            <p>Стоит учитывать, что все расчеты являются ориентировочными, более точные данные можно получить,
+                обратившись лично к нам по электронной почте <a class="link" href="mailto:sveta.horohorina@yandex.ru">sveta.horohorina@yandex.ru</a>
+                или через WhatsApp по телефону
+                <a class="link" href="tel:+79099598838"> +7 909 959 88 38</a>. Кроме подробного описания, вложите в
+                письмо
+                наиболее четкие фотографии с
+                разных ракурсов.</p>
+            <p>Наиболее объективную стоимость вам назовут наши самые компетентные оценщики непосредственно в нашем
+                салоне по
+                адресу: <a href="#map">Новослабодская 20с4</a></p>
+
+            <div class="tab">
+                <button class="tablinks active" onclick="openCity(event, 'gold')">Золото</button>
+                <button class="tablinks" onclick="openCity(event, 'silver')">Серебро</button>
+                <button class="tablinks" onclick="openCity(event, 'stons')">Камни</button>
+                <button class="tablinks" onclick="openCity(event, 'anticvaiate')">Антиквариат</button>
+                <button class="tablinks" onclick="openCity(event, 'clock')">Часы</button>
+                <button class="tablinks" onclick="openCity(event, 'brands')">Брендовые вещи</button>
+                <button class="tablinks" onclick="openCity(event, 'apple')">Техника apple</button>
+            </div>
+
+            <div id="gold" class="tabcontent">
+                <h2>Оценка золота</h2>
+                <div class="tabcont">
+
+                    <div class="tabcont-box">
+                        <p>Мы принимаем любые изделия из золота: ювелирные, драгоценные украшения с натуральными и
+                            цветными
+                            камнями, лом золота, стоматологическое золото, золотые монеты, часы, антикварное золото.</p>
+
+                    </div>
+                    <div class="tabcont-box">
+
+                        <form oninput="x.value=parseInt(a.value)+' грамм'">
+                            <div class="output">
+                                <output name="x" for="a b"></output>
+                            </div>
+                            <input type="range" min="1" max="100" id="a" value="1" class="slider" onchange="func()">
+                        </form>
+                        <p class="padding-top-25 pr">Проба</p>
+                        <div class="prob">
+                            <button class="operator" onclick="op='375p'">375</button>
+                            <button class="operator" onclick="op='-'">500</button>
+                            <button class="operator" onclick="op='*'">583</button>
+                            <button class="operator" onclick="op='/'">585</button>
+                            <button class="operator" onclick="op='a'">750</button>
+                            <button class="operator" onclick="op='b'">850</button>
+                            <button class="operator" onclick="op='c'">900</button>
+                            <button class="operator" onclick="op='d'">958</button>
+                        </div>
+                        <button class="result" onclick="func()">Рассчитать</button>
+
+                        <p id="result"></p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="silver" class="tabcontent">
+                <h2>Оценка серебра</h2>
+                <div class="tabcont">
+
+                    <div class="tabcont-box">
+                        <p>Мы принимаем любые изделия из золота: ювелирные, драгоценные украшения с натуральными и
+                            цветными
+                            камнями, лом золота, стоматологическое золото, золотые монеты, часы, антикварное золото.</p>
+
+                    </div>
+                    <div class="tabcont-box">
+
+                        <form oninput="x.value=parseInt(ab.value)+' грамм'">
+                            <div class="output">
+                                <output name="x" for="ab"></output>
+                            </div>
+                            <input type="range" min="1" max="100" id="ab" value="1" class="slider" onchange="func2()">
+                        </form>
+                        <p class="padding-top-25 pr">Проба</p>
+                        <div class="prob">
+                            <button class="operator" onclick="op2='+'">875</button>
+                            <button class="operator" onclick="op2='-'">916</button>
+                            <button class="operator" onclick="op2='*'">925</button>
+                            <button class="operator" onclick="op2='/'">960</button>
+                        </div>
+                        <button class="result" onclick="func2()">Рассчитать</button>
+
+                        <p id="result2"></p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="stons" class="tabcontent">
+                <h2>Оценка камней</h2>
+                <div class="tabcont">
+                    <div class="tabcont-box">
+
+                        <p>Мы принимаем любые драгоценные камни: бриллианты, сапфиры, изумруды, самоцветы как редких,
+                            так и
+                            распространенных цветов.</p>
+                        <p>При анализе драгоценных камней учитывают все параметры:</p>
+                        <ul>
+                            <li>Происхождение драгоценного камня;</li>
+                            <li>Размер и вес;</li>
+                            <li>Чистота и цвет;</li>
+                            <li>Характеристики огранки;</li>
+                            <li>Принадлежность к определенному бренду;</li>
+                            <li>Товарный вид изделия, сохранность документации.</li>
+                        </ul>
+
+                    </div>
+                    <div class="tabcont-box stone">
+                        <img alt=" " src="img/stone.png">
+                    </div>
+                </div>
+            </div>
+
+            <div id="anticvaiate" class="tabcontent">
+                <h2>Антиквариат</h2>
+                <div class="tabcont">
+                    <div class="tabcont-box">
+                        <p>Мы принимаем любые предметы антиквариата: иконы, книги, монеты, шкатулки, предметы живописи,
+                            изделия из фарфора, янтаря и металла, бронзы, кухонную утварь, сервизы и прочее.</p>
+
+
+                    </div>
+                    <div class="tabcont-box antikvar">
+                        <img src="img/antikvar.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div id="clock" class="tabcontent">
+                <h2>Часы</h2>
+                <div class="tabcont">
+                    <div class="tabcont-box">
+                        <p>Мы принимаем самые различные часы мировых брендов как наручные, так и карманные. Оценка часов
+                            производится нашими опытными экспертами при помощи каталогов и результатов аукционных
+                            продаж.</p>
+                        <p>На стоимость часов влияет</p>
+                        <ul>
+                            <li>Часовой бренд/модель;</li>
+                            <li>Материал изготовления часов (золото, платина, серебро и т.п.);</li>
+                            <li>Состояние часов;</li>
+                            <li>Вес предмета и проба;</li>
+                            <li>Год выпуска/производства;</li>
+                            <li>Наличие упаковки и документов на часы;</li>
+                            <li>Эксклюзивность/популярность изделия.</li>
+                        </ul>
+                    </div>
+                    <div class="tabcont-box clock">
+                        <img alt=" " src="img/clock.png">
+                    </div>
+                </div>
+            </div>
+            <div id="brands" class="tabcontent">
+                <h2>Брендовые вещи</h2>
+                <div class="tabcont">
+                    <div class="tabcont-box">
+                        <p>Мы заинтересованы в покупке оригинальных изделий в идеальном состоянии от таких известных
+                            брендов, как: D&G, Givenchy, Gucci, Celine, Cartier, Michael Kors, Ralph Lauren, Tom Ford,
+                            Louis
+                            Vuitton, Prada, Valentino, Roberto Cavalli, Hermes, Versace, Kenzo, Loro Piano, Burberry,
+                            Botega
+                            Venetta, Dior, Chanel.</p>
+                        <p>Мы принимаем различные аксессуары, очки, зонты, кожаные ремни, плащи, шубы, жилетки,
+                            перчатки,
+                            куртки из кожи в идеальном состоянии. Мех предпочтителен из ценных пород: шиншилла, соболь,
+                            рысь, норка, куница.</p>
+                        <p>Обратите внимание, что мы не скупаем реплики или уже изношенные вещи, только изделия
+                            премиальных
+                            марок, знаменитых своей оригинальностью и качеством.</p>
+                    </div>
+                    <div class="tabcont-box">
+                        <img alt=" " src="img/brands.png">
+                    </div>
+                </div>
+            </div>
+            <div id="apple" class="tabcontent">
+                <h2>Техника Apple</h2>
+                <div class="tabcont">
+                    <div class="tabcont-box">
+                        <p>Мы заинтересованы в покупке оригинальной техники Apple (смартфоны, планшеты, ноутбуки,
+                            персональные компьютеры, наушники, смарт часы и фитнес браслеты), а также оригинальных
+                            аксессуаров данной марки.</p>
+                        <p>Обратите внимание, что мы не скупаем копии и реплики или поврежденную технику, только
+                            оригинальную продукцию в идеальном состоянии.</p>
+
+                    </div>
+                    <div class="tabcont-box">
+                        <img src="img/apple.png" alt=" ">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="padding" id="footer">
+            <div>
+                <form method="post" id="ajax-contact-form" action="">
+                    <h2>Контакты</h2>
+                    <div class="flex">
+                        <div class="input">
+                            <p>Адрес: Новослабодская 20с4</p>
+                            <p>Тел:<a class="link" href="tel:+79099598838"> +7 909 959 88 38</a></p>
+                            <p>Email: <a class="link" href="mailto:sveta.horohorina@yandex.ru">sveta.horohorina@yandex.ru</a>
+                            </p>
+                            <p>Часы работы: 10:00 - 22:00 без выходных</p>
+                            <div class="social-wrap"></div>
+                        </div>
+                        <div class="input">
+                            <input class="form" name="name" type="text" placeholder="Имя">
+                            <input class="form" name="tel" type="tel" placeholder="Телефон">
+                            <input class="form" name="mailf" type="email" placeholder="E-Mail">
+                            <button name="submit" class="btn display-block">
+                                Отправить
+                            </button>
+                        </div>
+                        <div id="note"></div>
+                    </div>
+                </form>
+            </div>
+        </footer>
+    </div>
+</div>
+<div id="map" class="map-cont">
+    <div class="ymaps-2-1-77-ground-pane" style="position:relative;overflow:hidden;"><a
+            href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps"
+            style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a
+            href="https://yandex.ru/maps/213/moscow/?ll=37.598891%2C55.782244&mode=routes&rtext=55.781728%2C37.598596~55.782375%2C37.598995&rtt=pd&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fll%3D37.599%252C55.782%26spn%3D0.001%252C0.001%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%259C%25D0%25BE%25D1%2581%25D0%25BA%25D0%25B2%25D0%25B0%252C%2520%25D0%259D%25D0%25BE%25D0%25B2%25D0%25BE%25D1%2581%25D0%25BB%25D0%25BE%25D0%25B1%25D0%25BE%25D0%25B4%25D1%2581%25D0%25BA%25D0%25B0%25D1%258F%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%252C%252020%25D1%25814&utm_medium=mapframe&utm_source=maps&z=17.17"
+            style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс.Карты</a>
+        <iframe src="https://yandex.ru/map-widget/v1/-/CCUUNNDmkD" width="100%" height="500px" frameborder="1"
+                allowfullscreen="true" style="position:relative;"></iframe>
+    </div>
+
+</div>
+
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Test</title>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="line-1"></div>
+<div class="line-2"></div>
+
+<main>
+    <div class="container">
+        <nav>
+            <div class="logo"><a href="#"><img src="img/icon/Logo.svg"></a></div>
+            <div class="nav__menu">
+                <div class="item-menu"><a href="#">Home</a></div>
+                <div class="item-menu"><a href="#">Contacts</a></div>
+                <div></div>
+                <div class="burger-menu">
+                    <a href="#">
+                        <div class="menu-container" onclick="toggleMenu(this)">
+                            <div class="bar1"></div>
+
+                            <div class="bar2"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <section class="image-bg">
+            <img class="img-aside" src="img/aside.png">
+        </section>
+
+        <section class="content">
+            <div class="padding">
+                <p class="stars">Shooting Stars</p>
+                <h1>Pictures In The Sky</h1>
+                <p>Many people has the notion that enlightenment is one state. Many also believe that when it is
+                    attained, a
+                    person is forever in that state.</p>
+
+                <div class="buttons">
+                    <div>
+                        <button class="start">get started</button>
+                    </div>
+                    <div>
+                        <a href="#" target="_blank"><img class="rot" src="img/icon/twitter.svg"></a>
+                    </div>
+                    <div>
+                        <a href="#" target="_blank"><img class="rot" src="img/icon/Linkedin%20Icon.svg"></a>
+                    </div>
+                    <div>
+                        <a href="#" target="_blank"><img class="rot" src="img/icon/google.svg"></a>
+                    </div>
+                </div>
+
+                <div class="pages">
+                    <a href="#">
+                        <div class="active">1</div>
+                    </a>
+                    <a href="#">
+                        <div>2</div>
+                    </a>
+                    <a href="#">
+                        <div>3</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+</main>
+
+<script>
+    function toggleMenu(x) {
+        x.classList.toggle("change");
+        var itemMenus = document.getElementsByClassName('item-menu');
+        for (var i = 0; i < itemMenus.length; i++) {
+            var item = itemMenus[i];
+            item.classList.toggle("change-1");
+        }
+    }
+</script>
+
+</body>
+</html>

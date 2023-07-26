@@ -1,0 +1,17 @@
+.outer {
+    position: relative;
+    width: 200px;
+
+    background-color: #ffc;
+}
+
+.inner {
+    width: 100px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: #fcc;
+}

@@ -1,0 +1,110 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0;
+    padding: 60px 0 65px;
+}
+
+.checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    cursor: pointer;
+    height: 100%;
+}
+
+.item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 300;
+    height: auto;
+    padding-bottom: 30px;
+}
+
+.label {
+    background: #262626;
+    box-shadow: 0 1px 9px #0D0D0D;
+    min-height: 60px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 22px;
+}
+
+.item-2 {
+    display: none;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    background: #262626;
+    color: #C9C9C9;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.akkordeon-wrapper {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: url("img/body-background.png");
+
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+
+}
+.plus {
+    display: none;
+}
+.minus {
+    display: none;
+}
+.akkordeon-img{
+    display: block;
+    width: 50%;
+    height: auto;
+   margin: auto;
+}
+.akkordeon:hover .plus {
+    display: block;
+}
+.akkordeon .checkbox[type=checkbox]:checked + .label:nth-of-type(n) + ul, .akkordeon .checkbox[type=checkbox]:hover + .label + ul {
+    display: block;
+    min-height: 120px;
+    transition: 1s;
+    background: #1E1E1E;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.76);
+    border-radius: 0 0 5px 5px;
+    padding: 22px;
+}
+
+.akkordeon .checkbox[type=checkbox]:checked + .label:nth-of-type(n) > .minus, .akkordeon .checkbox[type=checkbox]:hover + .label > .minus {
+    display: block;
+}
+
+.akkordeon .checkbox[type=checkbox]:checked + .label:nth-of-type(n) > .plus, .akkordeon .checkbox[type=checkbox]:hover + .label > .plus {
+    display: none;
+}
+
+
