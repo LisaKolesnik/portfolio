@@ -1,258 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Portfolio</title>
 </head>
+
 <body>
-  <div class="container">
-    <main>
-      <header>
-        <p class="logo">MZ</p>
-        <nav class="topnav">
-          <button class="nav"><a class="nav-a" href="#About">About</a></button>
-          <button class="nav"><a class="nav-a" href="#Skills">Skills</a></button>
-          <button class="nav"><a class="nav-a" href="#Portfolio">Portfolio</a></button>
-          <button class="nav"><a class="nav-a" href="#Contacts">Contacts</a></button>
-        </nav>
-        <div class="dropdown-btn" onclick="openClose(this)">
-          <div class="bar1"></div>
-          <div class="bar2"></div>
-          <div class="bar3"></div>
+    <div class="container">
+        <main>
+            <header>
+
+                <p class="logo">MZ</p>
+                <nav class="topnav">
+                    <button class="nav"><a class="nav-a" href="#About">About</a></button>
+                    <button class="nav"><a class="nav-a" href="#Skills">Skills</a></button>
+                    <button class="nav"><a class="nav-a" href="#Portfolio">Portfolio</a></button>
+                    <button class="nav"><a class="nav-a" href="#Contacts">Contacts</a></button>
+                </nav>
+                <div class="dropdown-btn" onclick="openClose()">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <nav class="dropdown">
+                    <div id="dropdown" class="dropdown-content">
+                        <a class="nav-a dropdown-nav" href="#About" onclick="openClose()">About</a>
+                        <a class="nav-a dropdown-nav" href="#Skills" onclick="openClose()">Skills</a>
+                        <a class="nav-a dropdown-nav" href="#Portfolio" onclick="openClose()">Portfolio</a>
+                        <a class="nav-a dropdown-nav" href="#Contacts" onclick="openClose()">Contacts</a>
+                    </div>
+                </nav>
+                <div class="background"></div>
+            </header>
+            <div class="cont">
+                <img class="bg" src="./img/bg-main.png" alt="">
+                <h1 class="title"><span style="color: #1F1F1F;">We</span>b <span
+                        style="font-weight: 700; color: #AB0505;">d</span>esign</h1>
+                <p class="mz">Margarita Zaitseva</p>
+            </div>
+        </main>
+        <div id="About" class="cont_about">
+            <div class="about">
+                <p class="text-about">6 years commercial experience<br>
+                    9+ years expierence in design<br>
+                    10+ years html css</p>
+                <h1 class="about-title">Abou<span style="color: #1F1F1F;">t</span></h1>
+                <p class="design">Design</p>
+                <img class="photo" src="./img/photo.jpg" alt="">
+            </div>
         </div>
-        <nav class="dropdown">
-          <div id="dropdown" class="dropdown-content">
-            <a class="nav-a dropdown-nav" href="#About">About</a>
-            <a class="nav-a dropdown-nav" href="#Skills">Skills</a>
-            <a class="nav-a dropdown-nav" href="#Portfolio">Portfolio</a>
-            <a class="nav-a dropdown-nav" href="#Contacts">Contacts</a>
-          </div>
-        </nav>
-      </header>
-      <div class="cont">
-        <img class="bg" src="./img/bg-main.png" alt="">
-        <h1 class="title"><span style="color: #1F1F1F;">We</span>b <span style="font-weight: 700; color: #AB0505;">d</span>esign</h1>
-        <p class="mz">Margarita Zaitseva</p>
-      </div>
-    </main>
-    <div id="About" class="cont_about">
-      <div class="about">
-        <p class="text-about">6 years commercial experience<br>
-          9+ years expierence in design<br>
-          10+ years html  css</p>
-          <h1 class="about-title">Abou<span style="color: #1F1F1F;">t</span></h1>
-          <p class="design">Design</p>
-          <img class="photo" src="./img/photo.png" alt="">
-      </div>
+        <div id="Skills" class="cont_skills">
+            <h1 class="bg-about"><span class="about-style">A</span>bout</h1>
+            <h2 class="skills-title">Skills</h2>
+            <div class="skills-info">
+                <div class="skills-left">
+                    <div class="skills-tab">
+                        <button class="skill active" onclick="openSkill(event, 'HTML-CSS', 'StHC')">HTML, CSS</button>
+                        <!--            <button class="skill" onclick="openSkill(event, 'JS', 'StJS')">JS</button>-->
+                        <button class="skill" onclick="openSkill(event, 'Web-Design', 'StWD')">Web Design</button>
+                        <br>
+                        <button class="skill" onclick="openSkill(event, 'Other', 'StO')">Other</button>
+                    </div>
+                    <div id="StHC" class="statistic" style="display: flex;">
+                        <div class="statistic-left">
+                            <p class="statistic-text">Less</p>
+                            <p class="statistic-text">Sass</p>
+                            <p class="statistic-text">Bootstrap 3, 4, 5</p>
+                        </div>
+                        <div class="statistic-right">
+                            <div id="p1" class="percent"></div>
+                            <div id="p2" class="percent"></div>
+                            <div id="p3" class="percent"></div>
+                        </div>
+                    </div>
+                    <div id="StWD" class="statistic">
+                        <div class="statistic-left">
+                            <p class="statistic-text">Figma</p>
+                            <p class="statistic-text">Photoshop</p>
+                            <p class="statistic-text">Corel Draw</p>
+                        </div>
+                        <div class="statistic-right">
+                            <div id="p4" class="percent"></div>
+                            <div id="p5" class="percent"></div>
+                            <div id="p6" class="percent"></div>
+                        </div>
+                    </div>
+                    <div id="StO" class="statistic">
+                        <div class="statistic-left">
+                            <p class="statistic-text">English</p>
+                            <p class="statistic-text">Git</p>
+                            <p class="statistic-text">Latex</p>
+                        </div>
+                        <div class="statistic-right">
+                            <div id="p7" class="percent"></div>
+                            <div id="p8" class="percent"></div>
+                            <div id="p9" class="percent"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="HTML-CSS" class="skills-right" style="display: block;">
+                    <p class="skill-text">flexbox gradients shadows grid float position transforms @media</p>
+                    <p>math functions</p>
+                    <p>backgrounds</p>
+                    <p>animate css</p>
+                    <div class="skill-statistic">
+                        <p class="skill-statistic-text">12%</p>
+                        <p class="skill-statistic-text">87%</p>
+                        <p class="skill-statistic-text">95%</p>
+                    </div>
+                </div>
+                <!--            <div id="JS" class="skills-right">-->
+                <!--                <div class="skill-statistic">-->
+                <!--                    <p class="skill-statistic-text"></p>-->
+                <!--                    <p class="skill-statistic-text"></p>-->
+                <!--                    <p class="skill-statistic-text"></p>-->
+                <!--                    <p class="skill-statistic-text"></p>-->
+                <!--                </div>-->
+                <!--            </div>-->
+                <div id="Web-Design" class="skills-right">
+                    <p class="skill-text">composition</p>
+                    <p>color theory</p>
+                    <p>typography</p>
+                    <p>UI/UX</p>
+                    <div class="skill-statistic">
+                        <!--                    <p class="skill-statistic-text">12%</p>-->
+                        <!--                    <p class="skill-statistic-text">87%</p>-->
+                        <!--                    <p class="skill-statistic-text">95%</p>-->
+                    </div>
+                </div>
+                <div id="Other" class="skills-right">
+                    <div class="skill-statistic">
+                        <p class="skill-statistic-text"></p>
+                        <p class="skill-statistic-text"></p>
+                        <p class="skill-statistic-text"></p>
+                        <p class="skill-statistic-text"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <div class="courses">
+                    <h3 class="info-title">Courses</h3>
+                    <p class="courses-text">Книги бюро Горбунова</p>
+                    <p class="courses-text">Htmlacademy 800+ tasks</p>
+                    <p class="courses-text">Skill branch: UI/UX</p>
+                    <p class="courses-text">Wayup</p>
+                </div>
+                <div class="hobby">
+                    <h3 class="info-title">Hobby</h3>
+                    <div class="hobbys">
+                        <div class="hobby-svg">
+                            <svg width="68" height="75" viewBox="0 0 68 75" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M42.0177 3.65045C41.8238 3.87601 45.25 3.65043 45.25 4.03711C44.1823 4.26495 43.1034 4.43705 42.0177 4.55268C41.3389 4.55268 41.3712 5.19712 41.2419 5.39046C41.1126 5.5838 41.2419 5.77715 41.0803 5.90604C40.9187 6.03493 43.4722 5.90604 43.3752 5.90604C42.8257 6.51827 39.3672 6.64715 38.8177 7.45272C35.2622 12.6406 32.3531 19.6974 33.1612 21.0507C33.9693 22.4041 35.4562 21.663 37.04 22.0819C40.5817 22.982 43.6383 25.2097 45.5732 28.3009C46.47 30.2269 47.5525 32.0615 48.8054 33.7787C50.3941 35.5463 51.7022 37.5458 52.6842 39.7078C53.1367 40.7067 53.4276 42.0923 53.8802 42.9301C54.5539 44.2577 55.1476 45.6242 55.658 47.0223C56.1105 48.3757 56.369 49.8257 56.7246 51.1791C56.852 51.7258 57.0139 52.2639 57.2094 52.7902C57.5973 53.7891 58.1791 54.5947 58.6316 55.5291C59.0841 56.4636 60.7326 59.557 62.7043 62.7149C64.0059 64.6468 65.1827 66.6594 66.2275 68.7405C67.6174 71.8017 67.4881 74.4761 66.5508 74.4117C65.6134 74.3473 64.1589 72.5106 62.7043 70.6416C62.0256 69.8038 60.7003 69.385 60.1832 68.386C59.666 67.3871 60.668 66.5171 60.1832 65.5504C58.6317 63.0048 55.6579 61.1037 54.0741 58.1714C52.8458 55.8514 52.361 53.0158 51.2297 50.728C50.7125 49.6646 49.5489 48.8913 48.9671 48.0213C48.3853 47.1512 48.6439 46.6034 47.9651 46.1201C47.7712 45.959 47.1571 45.8623 46.9631 45.7334C47.2305 47.83 46.7746 49.955 45.6702 51.7591C42.7288 56.2703 37.7834 61.4259 35.4238 65.5504C34.7066 67.1855 33.8749 68.7683 32.935 70.2872C31.624 71.6855 30.0252 72.7847 28.2482 73.5095C26.632 74.3473 25.8239 73.0906 26.1148 72.4139C26.8035 71.3149 27.6913 70.3533 28.733 69.5783C29.0885 68.8694 28.733 66.5494 29.1532 65.776C29.5734 65.0027 32.0622 65.4538 32.3855 64.8415C33.937 62.5215 34.4865 58.397 35.941 55.8836C36.9107 54.1758 38.9793 53.4669 39.6581 51.888C40.3369 50.3091 40.9834 50.1479 41.0803 49.149C40.9125 47.4928 40.6535 45.8469 40.3046 44.2189C40.3556 42.5516 40.2908 40.8828 40.1107 39.2244C39.1414 38.0974 38.2861 36.8778 37.5572 35.5833C36.3612 33.811 38.6561 31.2332 37.5572 30.4921C37.0077 30.1376 36.5875 29.7509 36.038 29.7831C34.9708 29.964 33.9361 30.3006 32.9673 30.782C32.6436 31.0017 32.2968 31.1854 31.933 31.3298C29.8643 31.7809 27.8603 31.8454 27.1815 32.651C26.923 32.9732 27.1815 33.5854 27.1815 33.9721C27.1815 34.3588 30.4138 34.7454 31.5128 35.4865C31.7067 35.4865 30.1552 36.2922 30.2522 36.4855C30.64 37.1622 32.0299 37.5166 32.9673 37.6777C33.9046 37.8388 35.1006 36.3244 36.1995 36.6788C37.2985 37.0333 35.3591 38.3544 35.6824 38.7733C36.0056 39.1922 38.3975 38.7733 38.4622 39.5467C38.5268 40.32 36.7813 41.3833 36.6844 41.8344C36.5874 42.2856 38.8177 41.8344 38.7531 42.1889C38.6805 42.388 38.5941 42.5818 38.4945 42.7689C38.4945 42.7689 36.8138 43.0911 36.7814 43.1556C36.7491 43.22 38.5268 43.9934 38.4622 44.0578C38.3975 44.1223 35.3915 43.7356 35.2299 43.8645C35.0683 43.9934 36.846 45.7012 36.7491 45.8623C36.6521 46.0234 34.4864 45.089 34.3895 45.2178C34.2925 45.3467 37.1693 47.8279 36.943 48.1179C36.7167 48.4079 33.1613 46.7323 32.935 46.9257C32.7087 47.119 34.8743 49.1491 34.7127 49.278C34.5511 49.4068 32.2562 48.6013 31.9976 48.7624C31.739 48.9235 31.9976 50.4057 31.7713 50.5346C31.5451 50.6635 29.7997 49.6968 29.5734 49.8901C29.3471 50.0835 29.4117 51.2757 29.3148 51.2757C28.733 51.2757 25.63 49.4712 25.8239 49.9868C27.3754 54.0147 25.0805 49.7291 24.9513 49.5679C24.0785 48.4079 21.2341 47.0223 20.5553 46.3457C20.329 46.0879 19.2301 44.4767 19.1978 44.4767C19.1655 44.4767 18.8099 46.9901 18.6806 46.5068C18.5513 46.0234 18.1311 43.9934 17.9695 43.2845C17.8079 42.5756 17.0967 40.0622 16.8058 38.9666C16.8058 38.8055 16.2887 38.7089 16.2564 38.5478C16.3511 37.9392 16.3511 37.3196 16.2564 36.711C16.0625 36.0666 15.3837 35.6477 15.3514 35.5188C15.319 35.3899 14.9311 35.5188 14.9311 35.5188C14.9026 35.2618 14.9026 35.0024 14.9311 34.7454C14.9311 34.4232 15.9331 34.5843 15.9008 34.2621C15.8405 33.3394 15.8405 32.4137 15.9008 31.4909C15.9008 30.492 16.8059 31.781 17.9695 31.201C18.4543 30.9432 18.6483 30.1053 19.0039 29.6542C19.4129 29.0821 19.9027 28.572 20.4583 28.1398C21.2018 27.7209 22.8502 27.7853 22.3977 26.8831C21.9452 25.9808 20.9108 25.4975 20.329 24.563C19.5443 22.8984 18.5681 21.3304 17.42 19.8907C16.8382 19.3752 16.7412 18.9885 16.1271 18.6663C15.1754 18.3774 14.2794 17.9308 13.4766 17.3451C12.1837 15.9273 10.8584 14.5095 9.63015 13.124C8.40188 11.7384 6.85041 9.90168 5.71911 8.38721C5.26659 7.77497 5.13731 7.00161 4.71711 6.45382C4.29691 5.90603 3.55351 5.61604 3.23029 5.16493C2.45454 4.10157 1.19394 3.52154 1 2.78042C1 2.78042 1.00001 2.36153 1.51718 2.58709C2.03434 2.81265 2.22827 3.29598 2.51918 3.23154C2.81008 3.16709 2.7131 1.91043 2.81007 1.74932C2.90704 1.5882 2.81007 2.36154 2.81007 2.49043C2.84205 2.74476 2.95541 2.98202 3.13332 3.16708C3.24798 3.25859 3.39048 3.30849 3.53736 3.30849C3.68424 3.30849 3.82674 3.25859 3.94139 3.16708C4.10301 3.16708 3.94139 2.68373 3.94139 2.45817C3.94139 2.23261 4.19996 1.7493 4.23229 1.68486C4.26461 1.62041 4.94336 1.00817 5.008 1.07262C5.07265 1.13706 4.62018 1.74929 4.45857 2.3293C4.39681 3.10187 4.56547 3.87541 4.94339 4.55268C4.94339 4.74602 5.26659 4.81047 5.62215 4.81047C5.9777 4.81047 6.04239 4.81045 6.07471 4.48823C6.10704 4.166 6.07471 2.58706 6.07471 2.45817C6.07471 2.32928 6.30096 2.45817 6.46257 2.45817C6.62419 2.45817 6.46252 7.2594 6.91504 7.77496C9.01603 9.99834 13.1533 11.545 15.6745 13.8329C16.321 14.4129 16.4827 15.154 17.0645 15.734C21.4604 20.0519 24.7573 23.7253 25.0482 23.0808C25.6624 21.6952 28.2805 22.1141 29.0562 20.6319C31.739 14.9607 35.5208 7.13049 40.0137 4.3271C43.0521 2.23262 45.9288 -0.892965 42.0177 3.65045Z"
+                                    stroke="#C8CBD4" stroke-miterlimit="22.93" />
+                            </svg>
+                        </div>
+                        <div class="hobby-svg">
+                            <svg width="88" height="57" viewBox="0 0 88 57" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M11.7065 16.8516C15.6631 16.924 19.6173 16.6101 23.513 15.9144C25.6284 15.234 27.6883 14.3912 29.6743 13.3936C35.8679 11.0344 37.8679 12.3594 40.7712 14.7833C41.4989 15.5737 42.2746 16.3185 43.0938 17.0132L43.3841 48.0707C41.7067 48.0707 41.4486 46.2609 40.1583 44.8389C38.2584 43.0932 35.8917 41.9403 33.3478 41.5212C30.804 41.1022 28.1934 41.4353 25.8356 42.4797C23.1904 43.32 21.0614 45.0328 18.6098 45.7115C14.7838 46.5284 10.8503 46.714 6.96454 46.2609L11.7065 16.8516Z"
+                                    stroke="#C8CBD4" stroke-miterlimit="22.93" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M49.5618 8.44502C51.1498 7.5363 52.8891 6.92309 54.6954 6.63511C57.0465 6.4542 59.3856 6.14126 61.7017 5.6978C62.2427 5.50493 62.7711 5.27827 63.2837 5.01911C65.0595 4.08183 66.5125 2.69207 67.9976 1.78711L70.1931 28.742C68.6434 29.5823 67.4488 31.974 65.2532 32.5881C61.0559 33.493 57.2461 32.3295 54.082 33.3638C51.2398 34.2294 48.7644 36.0139 47.0434 38.438C46.0637 40.1655 45.1799 41.9458 44.3959 43.7708C44.3959 39.0521 44.3959 21.47 44.3959 14.6828C44.4282 13.0344 48.3026 9.15606 49.5618 8.44502Z"
+                                    stroke="#C8CBD4" stroke-miterlimit="22.93" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M9.03555 18.7387L4.25436 49.2955C9.29667 49.6535 14.3639 49.2277 19.2763 48.0331C21.6345 47.3533 23.8959 45.8643 26.1249 44.9904C28.2895 44.1214 30.6109 43.7136 32.9413 43.7927C35.8702 44.2104 38.5997 45.5214 40.7591 47.5476C41.5087 48.2437 42.2102 48.9898 42.859 49.781C43.1498 50.1371 43.3113 50.0076 44.1512 50.04C44.9911 50.0724 45.2173 49.3602 45.7664 48.5834C46.3156 47.8065 47.091 47.4181 47.7048 46.803C49.3246 45.0636 51.5395 44.0002 53.9073 43.8251C57.572 43.8655 61.1854 44.6934 64.5034 46.2528C66.0218 46.8678 67.7339 47.7094 69.2846 48.3244C73.7419 49.7751 78.4714 50.1848 83.1111 49.5221L78.9115 18.4797H79.3637L86.6324 51.8851H50.4507C49.1908 53.1151 48.6416 54.3452 47.8663 55.122C46.7167 55.9495 45.3404 56.4016 43.925 56.4168C42.4874 56.3843 41.0879 55.9468 39.8869 55.1544C38.9177 54.3128 38.3039 52.7267 36.6564 51.6909H0.894653L7.35568 19.3214L9.03555 18.7387Z"
+                                    stroke="#C8CBD4" stroke-miterlimit="22.93" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M73.3285 7.09863L70.1091 9.2862L71.912 30.8399C71.2276 31.8666 70.3401 32.7424 69.3043 33.4135C68.0377 34.1353 66.6341 34.5845 65.1835 34.7325C61.5878 34.6596 57.9921 34.8747 54.4308 35.3759C52.7429 36.0337 51.1596 36.9332 49.7305 38.046C47.6425 40.2022 46.0014 42.7495 44.9015 45.5415C46.8133 42.3018 49.7791 39.8151 53.3041 38.4963C58.2619 37.3704 64.3465 39.2362 69.2399 39.1397C70.8452 39.1561 72.4393 38.8724 73.9402 38.3033C75.1957 37.7564 75.904 36.8557 76.5157 36.727L73.3285 7.09863Z"
+                                    stroke="#C8CBD4" stroke-miterlimit="22.93" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M76.5056 14.9388H75.6375L78.628 39.7111C77.7798 39.7885 76.9464 39.9844 76.1519 40.2932C74.4476 41.134 73.4186 42.5246 70.7817 42.46C66.7622 42.46 61.1347 39.7758 56.7614 39.8081C49.9763 39.8081 43.8987 48.6046 45.3779 47.1493C46.7614 45.6576 48.341 44.3628 50.0728 43.3008C51.4445 42.6319 52.9542 42.2994 54.4783 42.3306C56.5324 42.1963 58.5951 42.3157 60.6202 42.6864C64.2218 43.6242 67.7912 45.3059 71.7465 46.1467C74.745 46.6174 77.7834 46.7799 80.8147 46.6318L76.5056 14.9388Z"
+                                    stroke="#C8CBD4" stroke-miterlimit="22.93" />
+                            </svg>
+                        </div>
+                        <div class="hobby-svg">
+                            <svg width="101" height="70" viewBox="0 0 101 70" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M35.4016 48.4045C41.3122 48.4045 48.321 45.4428 47.8042 46.0938C44.9082 49.0573 41.0102 50.8121 36.8873 51.0083C28.5866 51.6917 17.9281 47.0376 12.4696 47.298C7.01119 47.5583 0.583785 50.9432 1.35895 50.1295C4.72118 47.1974 8.86677 45.3295 13.2771 44.7594C16.184 44.5966 31.2351 48.2093 35.4016 48.4045Z"
+                                    stroke="#C8CBD4" stroke-miterlimit="22.93" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M44.5439 54.1571C43.4146 56.3763 36.252 58.885 33.9289 58.9171C28.315 58.9171 21.8944 56.0869 15.7965 55.7009C9.69859 55.315 4.95582 59.5925 5.66563 58.7242C6.58085 57.1299 7.89309 55.798 9.47563 54.8571C11.0582 53.9162 12.8575 53.3981 14.6995 53.353C16.345 53.353 25.8952 56.0868 34.058 56.5693C37.6706 56.4017 41.223 55.5845 44.5439 54.1571V54.1571Z"
+                                    stroke="#C8CBD4" stroke-miterlimit="22.93" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M68.6936 7.17422C69.7892 5.92284 71.1314 4.91103 72.6363 4.20211C75.3186 3.20064 79.4874 3.23293 82.5575 2.26376C85.6277 1.2946 87.2436 0.357713 87.4698 1.58532C87.4698 2.0053 84.7228 3.62059 84.3996 4.52514C84.0765 5.4297 86.2094 4.88053 86.371 5.46203C86.5326 6.04353 85.8216 6.04351 85.6601 6.30196C84.7229 7.78801 82.4283 8.27259 83.6241 9.53251C86.5972 12.1816 98.0052 14.766 100.009 14.7337C100.655 14.7337 99.4271 15.5737 97.8436 15.8644C95.0491 16.3021 92.2337 16.5932 89.4088 16.7366C88.4393 16.7366 91.7357 17.8027 90.8954 17.8996C89.2796 18.1258 84.7551 16.3167 82.6868 16.5105C81.7173 16.5105 84.3673 18.8365 84.0118 19.3857C83.6564 19.9349 79.9076 17.8997 79.7137 18.3842C79.0674 20.0641 81.3941 21.4209 82.7514 23.0362C84.7228 25.2976 87.0496 29.7558 89.9258 30.8542C91.2508 31.3711 85.3045 31.2419 82.1051 28.9805C80.6186 27.9467 80.0045 25.3945 78.5502 24.6192C77.9685 24.3284 78.1302 27.8498 77.5808 27.3652C75.868 26.3314 74.9308 23.65 73.4442 22.907C72.7009 22.5516 73.121 26.4929 72.4746 26.1376C69.6953 24.6192 68.532 20.6779 68.0795 21.7117C67.6271 22.7455 69.0167 24.3608 68.7582 25.2976C68.7582 25.5561 67.4008 25.2976 67.4008 25.6207C66.399 35.1185 64.1692 53.3712 66.0759 61.4476C66.6899 64.1935 71.2466 58.217 71.8606 60.446C72.4746 62.6751 72.7332 63.6766 72.7332 63.6766C72.7332 64.775 67.4332 68.7809 62.7149 68.7809C57.9966 68.7809 53.8277 67.1656 53.8277 66.0672C53.8277 66.0672 54.2477 64.355 54.8941 61.8029C55.3788 59.8968 58.1259 66.6487 58.7076 63.9028C59.2893 61.1568 58.4167 54.7603 58.7076 48.4607C58.8692 42.678 60.2587 36.6368 60.6465 32.9863C61.2415 29.7813 62.1843 26.6507 63.4582 23.65C63.8783 22.5839 65.2679 21.6471 65.1063 20.9041C64.9447 20.1611 62.7472 20.5487 60.2911 21.8409C57.835 23.1331 54.1508 26.1699 51.5008 27.3329C50.7252 27.6559 53.4076 24.3284 52.7289 24.6515C46.8795 27.4621 41.2886 30.6604 41.2563 28.8836C41.2239 27.1067 43.1307 25.9114 44.488 24.1023C46.0885 21.4954 47.8817 19.0117 49.8526 16.6721C51.1776 15.3152 53.3429 14.766 53.3752 13.6353C53.3752 13.3769 48.9478 13.3446 48.9801 12.86C49.0124 12.3754 52.2118 11.7616 51.4685 11.4062C50.7252 11.0509 47.235 11.4062 46.5887 10.6955C45.9423 9.98479 49.0447 8.85407 48.4307 8.49871C45.8776 7.04496 41.1917 6.65732 41.3856 5.94659C41.8703 4.42823 46.7826 5.49429 52.3411 5.26815C54.5286 4.9147 56.6885 4.40736 58.8045 3.74984C60.9479 3.44058 63.1246 3.44058 65.268 3.74984C67.207 4.20212 68.435 7.17422 68.6936 7.17422Z"
+                                    stroke="#C8CBD4" stroke-miterlimit="22.93" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M21.0223 47.7891C23.5734 47.7891 26.0673 47.0327 28.1884 45.6153C30.3096 44.198 31.9629 42.1835 32.9391 39.8266C33.9154 37.4697 34.1707 34.8762 33.673 32.3741C33.1754 29.8721 31.9469 27.5737 30.143 25.7698C28.3391 23.9659 26.0408 22.7375 23.5387 22.2398C21.0366 21.7421 18.4432 21.9976 16.0863 22.9738C13.7293 23.9501 11.7149 25.6033 10.2976 27.7245C8.88025 29.8456 8.12372 32.3394 8.12372 34.8905C8.12372 38.3115 9.48267 41.5923 11.9016 44.0112C14.3206 46.4302 17.6014 47.7891 21.0223 47.7891Z"
+                                    stroke="#C8CBD4" stroke-miterlimit="22.93" />
+                            </svg>
+                        </div>
+                        <div class="hobby-svg">
+                            <svg width="95" height="54" viewBox="0 0 95 54" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M33.4537 48.2394C43.422 48.2394 57.4872 39.2525 67.3264 39.6727C84.1659 40.3516 91.6502 48.401 93.8116 52.2479C95.6504 55.4806 83.7788 44.7157 69.391 44.4894C61.1003 44.4894 50.0352 52.5065 40.3573 52.9914C13.4205 54.3491 5.74272 46.1058 2.03286 40.3839C-1.677 34.662 6.35562 48.2394 33.4537 48.2394Z"
+                                    stroke="#C8CBD4" stroke-miterlimit="22.93" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M73.6405 25.3196C75.4663 25.3196 77.2511 24.7782 78.7692 23.7639C80.2873 22.7495 81.4705 21.3078 82.1692 19.621C82.8679 17.9341 83.0507 16.078 82.6945 14.2873C82.3383 12.4966 81.4591 10.8518 80.1681 9.56074C78.8771 8.26971 77.2322 7.39051 75.4415 7.03431C73.6508 6.67812 71.7946 6.86094 70.1078 7.55964C68.421 8.25834 66.9793 9.44155 65.965 10.9596C64.9506 12.4777 64.4092 14.2625 64.4092 16.0883C64.4177 18.534 65.3931 20.877 67.1224 22.6064C68.8518 24.3358 71.1949 25.3111 73.6405 25.3196V25.3196Z"
+                                    stroke="#C8CBD4" stroke-miterlimit="22.93" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M40.8201 0.787109C42.8801 0.787109 46.324 7.98398 50.7658 15.439C55.2075 22.894 60.6149 30.4781 60.6149 32.6404C60.6149 33.9313 21.4759 37.9654 17.2595 37.9654C13.043 37.9654 23.9543 33.2859 33.0953 28.0577C36.314 26.1536 42.4295 23.6363 43.7491 21.6031C44.4894 20.5058 40.5304 8.95215 36.9577 10.0817C30.2307 12.2117 20.0598 21.7322 15.9399 18.4081C12.7212 15.9231 19.1585 11.3081 26.6902 7.27398C31.2305 4.758 35.9539 2.58951 40.8201 0.787109Z"
+                                    stroke="#C8CBD4" stroke-miterlimit="22.93" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Portfolio" class="cont-portfolio">
+            <h2 class="portfolio-title">Portfolio</h2>
+            <div class="tab">
+                <button class="portfolio-tab active" onclick="openTab(event, 'Web-disign')">Web design</button>
+                <button class="portfolio-tab" onclick="openTab(event, 'Html-css-content')">Html, css</button>
+                <button class="portfolio-tab" onclick="openTab(event, 'Banner')">Banner</button>
+                <button class="portfolio-tab" onclick="openTab(event, 'Email')">Email</button>
+                <button class="portfolio-tab" onclick="openTab(event, 'Latex')">Latex</button>
+                <button class="portfolio-tab" onclick="openTab(event, 'Illustration')">Illustration</button>
+            </div>
+
+            <div id="Web-disign" class="portfolio-content" style="display: flex;">
+                <div class="design-img">
+                    <img class="portfolio-img" id='0' src="./img/p7.png" alt="" data-path="7">
+                    <img class="portfolio-img" src="./img/p4.png" alt="" data-path="4">
+                    <img class="portfolio-img" src="./img/p5.png" alt="" data-path="5">
+                    <img class="portfolio-img" src="./img/p6.png" alt="" data-path="6">
+                </div>
+                <div class="design-img">
+                    <img class="portfolio-img" src="./img/p10.png" alt="" data-path="10">
+                    <img class="portfolio-img" src="./img/p3.png" alt="" data-path="3">
+                </div>
+
+                <div class="design-img">
+                    <img class="portfolio-img" src="./img/p2.png" alt="" data-path="2">
+                    <img class="portfolio-img" src="./img/p8.png" alt="" data-path="8">
+                </div>
+
+                <div class="design-img">
+                    <img class="portfolio-img" src="./img/p9.png" alt="" data-path="9">
+                    <img class="portfolio-img" src="./img/p1.png" alt="" data-path="1">
+                </div>
+
+                <div class="shadow"></div>
+            </div>
+            <div id="Html-css-content" class="portfolio-content">
+                <div class="design-img">
+                    <img class="portfolio-img" src="./img/p1.png" alt="" data-path="1">
+                </div>
+
+                <div class="design-img">
+                    <img class="portfolio-img" src="./img/p10.png" alt="" data-path="10">
+                    <img class="portfolio-img" src="./img/p3.png" alt="" data-path="3">
+                </div>
+
+                <div class="design-img">
+                    <img class="portfolio-img" src="./img/p8.png" alt="" data-path="8">
+                </div>
+
+                <div class="design-img">
+                    <img class="portfolio-img" src="./img/p9.png" alt="" data-path="9">
+
+                </div>
+
+                <div class="shadow"></div>
+            </div>
+            <div id="Banner" class="portfolio-content">
+                <div class="design-img">
+                    <img class="portfolio-img" src="./img/p7.png" alt="" data-path="7">
+                </div>
+
+                <div class="design-img">
+                    <img class="portfolio-img" src="./img/p4.png" alt="" data-path="4">
+                    <img class="portfolio-img" src="./img/p5.png" alt="" data-path="5">
+                </div>
+
+                <div class="design-img">
+                    <img class="portfolio-img" src="./img/p2.png" alt="" data-path="2">
+                </div>
+
+                <div class="design-img">
+                </div>
+
+                <div class="shadow"></div>
+            </div>
+            <div id="Email" class="portfolio-content">
+                <div class="design-img">
+                    <img class="portfolio-img email" src="./img/email-1.png" alt="" data-path="14">
+                </div>
+
+                <div class="design-img">
+                    <img class="portfolio-img latex" src="./img/email-2.png" alt="" data-path="15">
+                </div>
+
+                <div class="design-img">
+                    <img class="portfolio-img latex" src="./img/email-3.png" alt="" data-path="16">
+                </div>
+
+                <div class="design-img">
+                </div>
+
+                <div class="shadow"></div>
+            </div>
+            <div id="Latex" class="portfolio-content">
+                <div class="design-img latex">
+                    <img class="portfolio-img" src="./img/latex-1.png" alt="" data-path="17">
+                </div>
+
+                <div class="design-img latex">
+                    <img class="portfolio-img" src="./img/latex-2.png" alt="" data-path="18">
+                </div>
+
+                <div class="design-img latex">
+                    <img class="portfolio-img" src="./img/latex-3.png" alt="" data-path="19">
+                </div>
+
+                <div class="design-img latex">
+                    <img class="portfolio-img" src="./img/latex-4.png" alt="" data-path="20">
+                </div>
+
+                <div class="shadow"></div>
+            </div>
+            <div id="Illustration" class="portfolio-content">
+                <div class="design-img latex">
+                    <img class="portfolio-img" src="./img/p11.jpg" alt="" data-path="11">
+                </div>
+                <div class="design-img">
+                    <img class="portfolio-img" src="./img/p12.png" alt="" data-path="12">
+                </div>
+                <div class="design-img">
+                    <img class="portfolio-img" src="./img/p13.png" alt="" data-path="13">
+                </div>
+
+                <div class="design-img">
+                </div>
+
+                <div class="shadow"></div>
+            </div>
+            <div class="modal-div"></div>
+
+        </div>
+        <div class="cont-contacts">
+            <h2 id="Contacts" class="contacts-title">Contacts</h2>
+            <div class="contain">
+
+            
+            <div class="links-cont">
+            <a class="contacts-links" href="tel:+79017887602">Tel: +79017887602</a><br>
+            <a class="contacts-links" href="mailto:mageniya@gmail.com">Email: mageniya@gmail.com</a>
+            </div>
+            <div class="links-cont">
+                <div class="icons">
+                <a href="http://" target="_blank" rel="noopener noreferrer" class="disable-link"><img src="./img/VK.svg" alt="" class="social"></a>
+                <a href="http://" target="_blank" rel="noopener noreferrer" class="disable-link"><img src="./img/skype.svg" alt="" class="social"></a>
+                <a href="http://" target="_blank" rel="noopener noreferrer" class="disable-link"><img src="./img/facebook.svg" alt="" class="social"></a>
+                <a href="http://" target="_blank" rel="noopener noreferrer" class="disable-link"><img src="./img/insta.svg" alt="" class="social"></a>
+                <a href="https://t.me/Allary7" target="_blank" rel="noopener noreferrer"><img src="./img/telegram.svg" alt="" class="social"></a>
+                <a href="https://wa.me/+79017887602" target="_blank" rel="noopener noreferrer"><img src="./img/whatsapp.svg" alt="" class="social"></a>
+                </div>
+                <p class="copyright">© Copyright 2022 Margarita Zaitseva. All rights reserved.</p>   
+            </div>
+            </div>
+        </div>
     </div>
-    <div id="Skills" class="cont_skills">
-      <h1 class="bg-about"> <span class="about-style">A</span>bout</h1>
-      <h2 class="skills-title">Skills</h2>
-      <div class="skills-info">
-        <div class="skills-left">
-          <div class="skills-tab">          
-            <button class="skill" onclick="openSkill(event, 'HTML-CSS', 'StHC')">HTML, CSS</button>
-            <button class="skill" onclick="openSkill(event, 'JS', 'StJS')">JS</button>
-            <button class="skill" onclick="openSkill(event, 'Web-Design', 'StWD')">Web Design</button>
-            <br>
-            <button class="skill" onclick="openSkill(event, 'Other', 'StO')">Other</button>
-          </div>
-          <div id="StHC" class="statistic">
-            <div class="statistic-left">
-              <p class="statistic-text">Less</p>
-              <p class="statistic-text">Sass</p>
-              <p class="statistic-text">Bootstrap 3, 4, 5</p>
-            </div>
-            <div class="statistic-right">
-              <div id="p1" class="percent"></div>
-              <div id="p2" class="percent"></div>
-              <div id="p3" class="percent"></div>
-              <div id="p4" class="percent"></div>
-            </div>
-          </div>
-          <div id="StJS" class="statistic">
-            <div class="statistic-left">
-              <p class="statistic-text"></p>
-              <p class="statistic-text"></p>
-              <p class="statistic-text"></p>
-            </div>
-            <div class="statistic-right">
-              <div class="percent"></div>
-              <div class="percent"></div>
-              <div class="percent"></div>
-              <div class="percent"></div>
-            </div>
-          </div>
-          <div id="StWD" class="statistic">
-            <div class="statistic-left">
-              <p class="statistic-text"></p>
-              <p class="statistic-text"></p>
-              <p class="statistic-text"></p>
-            </div>
-            <div class="statistic-right">
-              <div class="percent"></div>
-              <div class="percent"></div>
-              <div class="percent"></div>
-              <div class="percent"></div>
-            </div>
-          </div>
-          <div id="StO" class="statistic">
-            <div class="statistic-left">
-              <p class="statistic-text"></p>
-              <p class="statistic-text"></p>
-              <p class="statistic-text"></p>
-            </div>
-            <div class="statistic-right">
-              <div class="percent"></div>
-              <div class="percent"></div>
-              <div class="percent"></div>
-              <div class="percent"></div>
-            </div>
-          </div>
-        </div>
-        <div id="HTML-CSS" class="skills-right">
-          <p class="skill-text">flexbox gradients shadows grid float position transforms @media</p>
-          <p>math functions</p>
-          <p>backgrounds</p>
-          <p>animate css</p>
-          <div class="skill-statistic">
-            <p class="skill-statistic-text">12%</p>
-            <p class="skill-statistic-text">87%</p>
-            <p class="skill-statistic-text">95%</p>
-            <p class="skill-statistic-text">34%</p>
-          </div>
-        </div>
-        <div id="JS" class="skills-right">
-          <div class="skill-statistic">
-            <p class="skill-statistic-text"></p>
-            <p class="skill-statistic-text"></p>
-            <p class="skill-statistic-text"></p>
-            <p class="skill-statistic-text"></p>
-          </div>
-        </div>
-        <div id="Web-Design" class="skills-right">
-          <div class="skill-statistic">
-            <p class="skill-statistic-text"></p>
-            <p class="skill-statistic-text"></p>
-            <p class="skill-statistic-text"></p>
-            <p class="skill-statistic-text"></p>
-          </div>
-        </div>
-        <div id="Other" class="skills-right">
-          <div class="skill-statistic">
-            <p class="skill-statistic-text"></p>
-            <p class="skill-statistic-text"></p>
-            <p class="skill-statistic-text"></p>
-            <p class="skill-statistic-text"></p>
-          </div>
-        </div>
-      </div>
-      <div class="info">
-        <div class="courses">
-          <h3 class="info-title">Courses</h3>
-          <p class="courses-text">Книги бюро Горбунова</p>
-          <p class="courses-text">Htmlacademy 800+ tasks</p>
-          <p class="courses-text">Skill branch: UI/UX</p>
-          <p class="courses-text">Wayup</p>
-        </div>
-        <div class="hobby">
-          <h3 class="info-title">Hobby</h3>
-          <div class="hobbys">
-            <div class="hobby-svg">  
-              <svg width="68" height="75" viewBox="0 0 68 75" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M42.0177 3.65045C41.8238 3.87601 45.25 3.65043 45.25 4.03711C44.1823 4.26495 43.1034 4.43705 42.0177 4.55268C41.3389 4.55268 41.3712 5.19712 41.2419 5.39046C41.1126 5.5838 41.2419 5.77715 41.0803 5.90604C40.9187 6.03493 43.4722 5.90604 43.3752 5.90604C42.8257 6.51827 39.3672 6.64715 38.8177 7.45272C35.2622 12.6406 32.3531 19.6974 33.1612 21.0507C33.9693 22.4041 35.4562 21.663 37.04 22.0819C40.5817 22.982 43.6383 25.2097 45.5732 28.3009C46.47 30.2269 47.5525 32.0615 48.8054 33.7787C50.3941 35.5463 51.7022 37.5458 52.6842 39.7078C53.1367 40.7067 53.4276 42.0923 53.8802 42.9301C54.5539 44.2577 55.1476 45.6242 55.658 47.0223C56.1105 48.3757 56.369 49.8257 56.7246 51.1791C56.852 51.7258 57.0139 52.2639 57.2094 52.7902C57.5973 53.7891 58.1791 54.5947 58.6316 55.5291C59.0841 56.4636 60.7326 59.557 62.7043 62.7149C64.0059 64.6468 65.1827 66.6594 66.2275 68.7405C67.6174 71.8017 67.4881 74.4761 66.5508 74.4117C65.6134 74.3473 64.1589 72.5106 62.7043 70.6416C62.0256 69.8038 60.7003 69.385 60.1832 68.386C59.666 67.3871 60.668 66.5171 60.1832 65.5504C58.6317 63.0048 55.6579 61.1037 54.0741 58.1714C52.8458 55.8514 52.361 53.0158 51.2297 50.728C50.7125 49.6646 49.5489 48.8913 48.9671 48.0213C48.3853 47.1512 48.6439 46.6034 47.9651 46.1201C47.7712 45.959 47.1571 45.8623 46.9631 45.7334C47.2305 47.83 46.7746 49.955 45.6702 51.7591C42.7288 56.2703 37.7834 61.4259 35.4238 65.5504C34.7066 67.1855 33.8749 68.7683 32.935 70.2872C31.624 71.6855 30.0252 72.7847 28.2482 73.5095C26.632 74.3473 25.8239 73.0906 26.1148 72.4139C26.8035 71.3149 27.6913 70.3533 28.733 69.5783C29.0885 68.8694 28.733 66.5494 29.1532 65.776C29.5734 65.0027 32.0622 65.4538 32.3855 64.8415C33.937 62.5215 34.4865 58.397 35.941 55.8836C36.9107 54.1758 38.9793 53.4669 39.6581 51.888C40.3369 50.3091 40.9834 50.1479 41.0803 49.149C40.9125 47.4928 40.6535 45.8469 40.3046 44.2189C40.3556 42.5516 40.2908 40.8828 40.1107 39.2244C39.1414 38.0974 38.2861 36.8778 37.5572 35.5833C36.3612 33.811 38.6561 31.2332 37.5572 30.4921C37.0077 30.1376 36.5875 29.7509 36.038 29.7831C34.9708 29.964 33.9361 30.3006 32.9673 30.782C32.6436 31.0017 32.2968 31.1854 31.933 31.3298C29.8643 31.7809 27.8603 31.8454 27.1815 32.651C26.923 32.9732 27.1815 33.5854 27.1815 33.9721C27.1815 34.3588 30.4138 34.7454 31.5128 35.4865C31.7067 35.4865 30.1552 36.2922 30.2522 36.4855C30.64 37.1622 32.0299 37.5166 32.9673 37.6777C33.9046 37.8388 35.1006 36.3244 36.1995 36.6788C37.2985 37.0333 35.3591 38.3544 35.6824 38.7733C36.0056 39.1922 38.3975 38.7733 38.4622 39.5467C38.5268 40.32 36.7813 41.3833 36.6844 41.8344C36.5874 42.2856 38.8177 41.8344 38.7531 42.1889C38.6805 42.388 38.5941 42.5818 38.4945 42.7689C38.4945 42.7689 36.8138 43.0911 36.7814 43.1556C36.7491 43.22 38.5268 43.9934 38.4622 44.0578C38.3975 44.1223 35.3915 43.7356 35.2299 43.8645C35.0683 43.9934 36.846 45.7012 36.7491 45.8623C36.6521 46.0234 34.4864 45.089 34.3895 45.2178C34.2925 45.3467 37.1693 47.8279 36.943 48.1179C36.7167 48.4079 33.1613 46.7323 32.935 46.9257C32.7087 47.119 34.8743 49.1491 34.7127 49.278C34.5511 49.4068 32.2562 48.6013 31.9976 48.7624C31.739 48.9235 31.9976 50.4057 31.7713 50.5346C31.5451 50.6635 29.7997 49.6968 29.5734 49.8901C29.3471 50.0835 29.4117 51.2757 29.3148 51.2757C28.733 51.2757 25.63 49.4712 25.8239 49.9868C27.3754 54.0147 25.0805 49.7291 24.9513 49.5679C24.0785 48.4079 21.2341 47.0223 20.5553 46.3457C20.329 46.0879 19.2301 44.4767 19.1978 44.4767C19.1655 44.4767 18.8099 46.9901 18.6806 46.5068C18.5513 46.0234 18.1311 43.9934 17.9695 43.2845C17.8079 42.5756 17.0967 40.0622 16.8058 38.9666C16.8058 38.8055 16.2887 38.7089 16.2564 38.5478C16.3511 37.9392 16.3511 37.3196 16.2564 36.711C16.0625 36.0666 15.3837 35.6477 15.3514 35.5188C15.319 35.3899 14.9311 35.5188 14.9311 35.5188C14.9026 35.2618 14.9026 35.0024 14.9311 34.7454C14.9311 34.4232 15.9331 34.5843 15.9008 34.2621C15.8405 33.3394 15.8405 32.4137 15.9008 31.4909C15.9008 30.492 16.8059 31.781 17.9695 31.201C18.4543 30.9432 18.6483 30.1053 19.0039 29.6542C19.4129 29.0821 19.9027 28.572 20.4583 28.1398C21.2018 27.7209 22.8502 27.7853 22.3977 26.8831C21.9452 25.9808 20.9108 25.4975 20.329 24.563C19.5443 22.8984 18.5681 21.3304 17.42 19.8907C16.8382 19.3752 16.7412 18.9885 16.1271 18.6663C15.1754 18.3774 14.2794 17.9308 13.4766 17.3451C12.1837 15.9273 10.8584 14.5095 9.63015 13.124C8.40188 11.7384 6.85041 9.90168 5.71911 8.38721C5.26659 7.77497 5.13731 7.00161 4.71711 6.45382C4.29691 5.90603 3.55351 5.61604 3.23029 5.16493C2.45454 4.10157 1.19394 3.52154 1 2.78042C1 2.78042 1.00001 2.36153 1.51718 2.58709C2.03434 2.81265 2.22827 3.29598 2.51918 3.23154C2.81008 3.16709 2.7131 1.91043 2.81007 1.74932C2.90704 1.5882 2.81007 2.36154 2.81007 2.49043C2.84205 2.74476 2.95541 2.98202 3.13332 3.16708C3.24798 3.25859 3.39048 3.30849 3.53736 3.30849C3.68424 3.30849 3.82674 3.25859 3.94139 3.16708C4.10301 3.16708 3.94139 2.68373 3.94139 2.45817C3.94139 2.23261 4.19996 1.7493 4.23229 1.68486C4.26461 1.62041 4.94336 1.00817 5.008 1.07262C5.07265 1.13706 4.62018 1.74929 4.45857 2.3293C4.39681 3.10187 4.56547 3.87541 4.94339 4.55268C4.94339 4.74602 5.26659 4.81047 5.62215 4.81047C5.9777 4.81047 6.04239 4.81045 6.07471 4.48823C6.10704 4.166 6.07471 2.58706 6.07471 2.45817C6.07471 2.32928 6.30096 2.45817 6.46257 2.45817C6.62419 2.45817 6.46252 7.2594 6.91504 7.77496C9.01603 9.99834 13.1533 11.545 15.6745 13.8329C16.321 14.4129 16.4827 15.154 17.0645 15.734C21.4604 20.0519 24.7573 23.7253 25.0482 23.0808C25.6624 21.6952 28.2805 22.1141 29.0562 20.6319C31.739 14.9607 35.5208 7.13049 40.0137 4.3271C43.0521 2.23262 45.9288 -0.892965 42.0177 3.65045Z"    stroke="#C8CBD4" stroke-miterlimit="22.93"/>  
-              </svg>
-            </div>
-            <div class="hobby-svg">
-              <svg width="88" height="57" viewBox="0 0 88 57" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.7065 16.8516C15.6631 16.924 19.6173 16.6101 23.513 15.9144C25.6284 15.234 27.6883 14.3912 29.6743 13.3936C35.8679 11.0344 37.8679 12.3594 40.7712 14.7833C41.4989 15.5737 42.2746 16.3185 43.0938 17.0132L43.3841 48.0707C41.7067 48.0707 41.4486 46.2609 40.1583 44.8389C38.2584 43.0932 35.8917 41.9403 33.3478 41.5212C30.804 41.1022 28.1934 41.4353 25.8356 42.4797C23.1904 43.32 21.0614 45.0328 18.6098 45.7115C14.7838 46.5284 10.8503 46.714 6.96454 46.2609L11.7065 16.8516Z" stroke="#C8CBD4" stroke-miterlimit="22.93"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M49.5618 8.44502C51.1498 7.5363 52.8891 6.92309 54.6954 6.63511C57.0465 6.4542 59.3856 6.14126 61.7017 5.6978C62.2427 5.50493 62.7711 5.27827 63.2837 5.01911C65.0595 4.08183 66.5125 2.69207 67.9976 1.78711L70.1931 28.742C68.6434 29.5823 67.4488 31.974 65.2532 32.5881C61.0559 33.493 57.2461 32.3295 54.082 33.3638C51.2398 34.2294 48.7644 36.0139 47.0434 38.438C46.0637 40.1655 45.1799 41.9458 44.3959 43.7708C44.3959 39.0521 44.3959 21.47 44.3959 14.6828C44.4282 13.0344 48.3026 9.15606 49.5618 8.44502Z" stroke="#C8CBD4" stroke-miterlimit="22.93"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.03555 18.7387L4.25436 49.2955C9.29667 49.6535 14.3639 49.2277 19.2763 48.0331C21.6345 47.3533 23.8959 45.8643 26.1249 44.9904C28.2895 44.1214 30.6109 43.7136 32.9413 43.7927C35.8702 44.2104 38.5997 45.5214 40.7591 47.5476C41.5087 48.2437 42.2102 48.9898 42.859 49.781C43.1498 50.1371 43.3113 50.0076 44.1512 50.04C44.9911 50.0724 45.2173 49.3602 45.7664 48.5834C46.3156 47.8065 47.091 47.4181 47.7048 46.803C49.3246 45.0636 51.5395 44.0002 53.9073 43.8251C57.572 43.8655 61.1854 44.6934 64.5034 46.2528C66.0218 46.8678 67.7339 47.7094 69.2846 48.3244C73.7419 49.7751 78.4714 50.1848 83.1111 49.5221L78.9115 18.4797H79.3637L86.6324 51.8851H50.4507C49.1908 53.1151 48.6416 54.3452 47.8663 55.122C46.7167 55.9495 45.3404 56.4016 43.925 56.4168C42.4874 56.3843 41.0879 55.9468 39.8869 55.1544C38.9177 54.3128 38.3039 52.7267 36.6564 51.6909H0.894653L7.35568 19.3214L9.03555 18.7387Z" stroke="#C8CBD4" stroke-miterlimit="22.93"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M73.3285 7.09863L70.1091 9.2862L71.912 30.8399C71.2276 31.8666 70.3401 32.7424 69.3043 33.4135C68.0377 34.1353 66.6341 34.5845 65.1835 34.7325C61.5878 34.6596 57.9921 34.8747 54.4308 35.3759C52.7429 36.0337 51.1596 36.9332 49.7305 38.046C47.6425 40.2022 46.0014 42.7495 44.9015 45.5415C46.8133 42.3018 49.7791 39.8151 53.3041 38.4963C58.2619 37.3704 64.3465 39.2362 69.2399 39.1397C70.8452 39.1561 72.4393 38.8724 73.9402 38.3033C75.1957 37.7564 75.904 36.8557 76.5157 36.727L73.3285 7.09863Z" stroke="#C8CBD4" stroke-miterlimit="22.93"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M76.5056 14.9388H75.6375L78.628 39.7111C77.7798 39.7885 76.9464 39.9844 76.1519 40.2932C74.4476 41.134 73.4186 42.5246 70.7817 42.46C66.7622 42.46 61.1347 39.7758 56.7614 39.8081C49.9763 39.8081 43.8987 48.6046 45.3779 47.1493C46.7614 45.6576 48.341 44.3628 50.0728 43.3008C51.4445 42.6319 52.9542 42.2994 54.4783 42.3306C56.5324 42.1963 58.5951 42.3157 60.6202 42.6864C64.2218 43.6242 67.7912 45.3059 71.7465 46.1467C74.745 46.6174 77.7834 46.7799 80.8147 46.6318L76.5056 14.9388Z" stroke="#C8CBD4" stroke-miterlimit="22.93"/>
-              </svg>
-            </div>
-            <div class="hobby-svg">
-              <svg width="101" height="70" viewBox="0 0 101 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M35.4016 48.4045C41.3122 48.4045 48.321 45.4428 47.8042 46.0938C44.9082 49.0573 41.0102 50.8121 36.8873 51.0083C28.5866 51.6917 17.9281 47.0376 12.4696 47.298C7.01119 47.5583 0.583785 50.9432 1.35895 50.1295C4.72118 47.1974 8.86677 45.3295 13.2771 44.7594C16.184 44.5966 31.2351 48.2093 35.4016 48.4045Z" stroke="#C8CBD4" stroke-miterlimit="22.93"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M44.5439 54.1571C43.4146 56.3763 36.252 58.885 33.9289 58.9171C28.315 58.9171 21.8944 56.0869 15.7965 55.7009C9.69859 55.315 4.95582 59.5925 5.66563 58.7242C6.58085 57.1299 7.89309 55.798 9.47563 54.8571C11.0582 53.9162 12.8575 53.3981 14.6995 53.353C16.345 53.353 25.8952 56.0868 34.058 56.5693C37.6706 56.4017 41.223 55.5845 44.5439 54.1571V54.1571Z" stroke="#C8CBD4" stroke-miterlimit="22.93"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M68.6936 7.17422C69.7892 5.92284 71.1314 4.91103 72.6363 4.20211C75.3186 3.20064 79.4874 3.23293 82.5575 2.26376C85.6277 1.2946 87.2436 0.357713 87.4698 1.58532C87.4698 2.0053 84.7228 3.62059 84.3996 4.52514C84.0765 5.4297 86.2094 4.88053 86.371 5.46203C86.5326 6.04353 85.8216 6.04351 85.6601 6.30196C84.7229 7.78801 82.4283 8.27259 83.6241 9.53251C86.5972 12.1816 98.0052 14.766 100.009 14.7337C100.655 14.7337 99.4271 15.5737 97.8436 15.8644C95.0491 16.3021 92.2337 16.5932 89.4088 16.7366C88.4393 16.7366 91.7357 17.8027 90.8954 17.8996C89.2796 18.1258 84.7551 16.3167 82.6868 16.5105C81.7173 16.5105 84.3673 18.8365 84.0118 19.3857C83.6564 19.9349 79.9076 17.8997 79.7137 18.3842C79.0674 20.0641 81.3941 21.4209 82.7514 23.0362C84.7228 25.2976 87.0496 29.7558 89.9258 30.8542C91.2508 31.3711 85.3045 31.2419 82.1051 28.9805C80.6186 27.9467 80.0045 25.3945 78.5502 24.6192C77.9685 24.3284 78.1302 27.8498 77.5808 27.3652C75.868 26.3314 74.9308 23.65 73.4442 22.907C72.7009 22.5516 73.121 26.4929 72.4746 26.1376C69.6953 24.6192 68.532 20.6779 68.0795 21.7117C67.6271 22.7455 69.0167 24.3608 68.7582 25.2976C68.7582 25.5561 67.4008 25.2976 67.4008 25.6207C66.399 35.1185 64.1692 53.3712 66.0759 61.4476C66.6899 64.1935 71.2466 58.217 71.8606 60.446C72.4746 62.6751 72.7332 63.6766 72.7332 63.6766C72.7332 64.775 67.4332 68.7809 62.7149 68.7809C57.9966 68.7809 53.8277 67.1656 53.8277 66.0672C53.8277 66.0672 54.2477 64.355 54.8941 61.8029C55.3788 59.8968 58.1259 66.6487 58.7076 63.9028C59.2893 61.1568 58.4167 54.7603 58.7076 48.4607C58.8692 42.678 60.2587 36.6368 60.6465 32.9863C61.2415 29.7813 62.1843 26.6507 63.4582 23.65C63.8783 22.5839 65.2679 21.6471 65.1063 20.9041C64.9447 20.1611 62.7472 20.5487 60.2911 21.8409C57.835 23.1331 54.1508 26.1699 51.5008 27.3329C50.7252 27.6559 53.4076 24.3284 52.7289 24.6515C46.8795 27.4621 41.2886 30.6604 41.2563 28.8836C41.2239 27.1067 43.1307 25.9114 44.488 24.1023C46.0885 21.4954 47.8817 19.0117 49.8526 16.6721C51.1776 15.3152 53.3429 14.766 53.3752 13.6353C53.3752 13.3769 48.9478 13.3446 48.9801 12.86C49.0124 12.3754 52.2118 11.7616 51.4685 11.4062C50.7252 11.0509 47.235 11.4062 46.5887 10.6955C45.9423 9.98479 49.0447 8.85407 48.4307 8.49871C45.8776 7.04496 41.1917 6.65732 41.3856 5.94659C41.8703 4.42823 46.7826 5.49429 52.3411 5.26815C54.5286 4.9147 56.6885 4.40736 58.8045 3.74984C60.9479 3.44058 63.1246 3.44058 65.268 3.74984C67.207 4.20212 68.435 7.17422 68.6936 7.17422Z" stroke="#C8CBD4" stroke-miterlimit="22.93"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M21.0223 47.7891C23.5734 47.7891 26.0673 47.0327 28.1884 45.6153C30.3096 44.198 31.9629 42.1835 32.9391 39.8266C33.9154 37.4697 34.1707 34.8762 33.673 32.3741C33.1754 29.8721 31.9469 27.5737 30.143 25.7698C28.3391 23.9659 26.0408 22.7375 23.5387 22.2398C21.0366 21.7421 18.4432 21.9976 16.0863 22.9738C13.7293 23.9501 11.7149 25.6033 10.2976 27.7245C8.88025 29.8456 8.12372 32.3394 8.12372 34.8905C8.12372 38.3115 9.48267 41.5923 11.9016 44.0112C14.3206 46.4302 17.6014 47.7891 21.0223 47.7891Z" stroke="#C8CBD4" stroke-miterlimit="22.93"/>
-              </svg>
-            </div>
-            <div class="hobby-svg">
-              <svg width="95" height="54" viewBox="0 0 95 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M33.4537 48.2394C43.422 48.2394 57.4872 39.2525 67.3264 39.6727C84.1659 40.3516 91.6502 48.401 93.8116 52.2479C95.6504 55.4806 83.7788 44.7157 69.391 44.4894C61.1003 44.4894 50.0352 52.5065 40.3573 52.9914C13.4205 54.3491 5.74272 46.1058 2.03286 40.3839C-1.677 34.662 6.35562 48.2394 33.4537 48.2394Z" stroke="#C8CBD4" stroke-miterlimit="22.93"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M73.6405 25.3196C75.4663 25.3196 77.2511 24.7782 78.7692 23.7639C80.2873 22.7495 81.4705 21.3078 82.1692 19.621C82.8679 17.9341 83.0507 16.078 82.6945 14.2873C82.3383 12.4966 81.4591 10.8518 80.1681 9.56074C78.8771 8.26971 77.2322 7.39051 75.4415 7.03431C73.6508 6.67812 71.7946 6.86094 70.1078 7.55964C68.421 8.25834 66.9793 9.44155 65.965 10.9596C64.9506 12.4777 64.4092 14.2625 64.4092 16.0883C64.4177 18.534 65.3931 20.877 67.1224 22.6064C68.8518 24.3358 71.1949 25.3111 73.6405 25.3196V25.3196Z" stroke="#C8CBD4" stroke-miterlimit="22.93"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M40.8201 0.787109C42.8801 0.787109 46.324 7.98398 50.7658 15.439C55.2075 22.894 60.6149 30.4781 60.6149 32.6404C60.6149 33.9313 21.4759 37.9654 17.2595 37.9654C13.043 37.9654 23.9543 33.2859 33.0953 28.0577C36.314 26.1536 42.4295 23.6363 43.7491 21.6031C44.4894 20.5058 40.5304 8.95215 36.9577 10.0817C30.2307 12.2117 20.0598 21.7322 15.9399 18.4081C12.7212 15.9231 19.1585 11.3081 26.6902 7.27398C31.2305 4.758 35.9539 2.58951 40.8201 0.787109Z" stroke="#C8CBD4" stroke-miterlimit="22.93"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="Portfolio" class="cont-portfolio">
-      <h2 class="portfolio-title">Portfolio</h2>
-      <div class="tab">
-        <button class="portfolio-tab" onclick="openTab(event, 'Web-disign')">Web disign</button>
-        <button class="portfolio-tab" onclick="openTab(event, 'Html-css')">Html, css</button>
-        <button class="portfolio-tab" onclick="openTab(event, 'Banner')">Banner</button>
-        <button class="portfolio-tab" onclick="openTab(event, 'Email')">Email</button>
-        <button class="portfolio-tab" onclick="openTab(event, 'Latex')">Latex</button>
-        <button class="portfolio-tab" onclick="openTab(event, 'Illustration')">Illustration</button>
-      </div>
-
-      <div id="Web-disign" class="portfolio-content">
-        <div class="design-img">
-          <img id="img" class="portfolio-img" src="./img/p7.png" alt="">
-          <img id="img" class="portfolio-img" src="./img/p4.png" alt="">
-          <img id="img" class="portfolio-img" src="./img/p5.png" alt="">
-          <img id="img" class="portfolio-img" src="./img/p6.png" alt="">
-          
-        <div id="mod" class="modal">
-          <span class="close">&times;</span>
-          <img class="modal-content" id="image">
-        </div>
-        </div>
-
-        <div class="design-img">
-          <img id="img" class="portfolio-img" src="./img/p10.png" alt="">
-          <img id="img" class="portfolio-img" src="./img/p3.png" alt="">
-        </div>
-
-        <div class="design-img">
-          <img id="img" class="portfolio-img" src="./img/p2.png" alt="">
-          <img id="img" class="portfolio-img" src="./img/p8.png" alt="">
-        </div>
-
-        <div class="design-img">
-          <img id="img" class="portfolio-img" src="./img/p9.png" alt="">
-          <img id="img" class="portfolio-img" src="./img/p1.png" alt="">
-        </div>
-
-        <div class="shadow"></div>
-      </div>
-      <div id="Html-css" class="portfolio-content"></div>
-      <div id="Banner" class="portfolio-content"></div>
-      <div id="Email" class="portfolio-content"></div>
-      <div id="Latex" class="portfolio-content"></div>
-      <div id="Illustration" class="portfolio-content">
-        <div class="shadow"></div>
-      </div>
-    </div>
-    <div class="cont-contacts">
-      <h2 id="Contacts" class="contacts-title">Contacts</h2>
-      <a class="contacts-links" href="tel:+79017887602">Tel:  +79017887602</a> <br>
-      <a class="contacts-links" href="mailto:mageniya@gmail.com">Email:  mageniya@gmail.com</a>
-    </div>
-    <p class="copyright">© Copyright 2022 qwerty.com. All rights reserved.</p>
-  </div>
-  <script src="./script.js"></script>
+    <script src="./script.js"></script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+    ym(93575884, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true,
+         webvisor:true
+    });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/93575884" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
+
 </html>
+
